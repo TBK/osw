@@ -1,0 +1,86 @@
+
+)steammessages_twofactor.steamclient.proto,steammessages_unified_base.steamclient.proto"@
+CTwoFactor_Status_Request#
+steamid (B‚µsteamid to use"Æ
+CTwoFactor_Status_Response&
+state (B‚µAuthenticator state=
+inactivation_reason (B ‚µInactivation reason (if any)5
+authenticator_type (B‚µType of authenticatorL
+authenticator_allowed (B-‚µ)Account allowed to have an authenticator?;
+steamguard_scheme (B ‚µSteam Guard scheme in effectA
+	token_gid (	B.‚µ*String rep of token GID assigned by serverB
+email_validated (B)‚µ%Account has verified email capability?
+device_identifier (	B$‚µ Authenticator (phone) identifier4
+time_created	 (B‚µWhen the token was createdW
+revocation_attempts_remaining
+ (B0‚µ,Number of revocation code attempts remaining^
+classified_agent (	BD‚µ@Agent that added the authenticator (e.g., ios / android / other)g
+allow_external_authenticator (BA‚µ=Allow a third-party authenticator (in addition to two-factor)_
+time_transferred (BE‚µAWhen the token was transferred from another device, if applicable"²
+#CTwoFactor_AddAuthenticator_Request#
+steamid (B‚µsteamid to use:
+authenticator_time (B‚µCurrent authenticator time?
+serial_number (B(‚µ$locally computed serial (deprecated)2
+authenticator_type (B‚µAuthenticator type7
+device_identifier (	B‚µAuthenticator identifierA
+sms_phone_id (	B+‚µ'ID of phone to use for SMS verification9
+http_headers (	B#‚µHTTP headers alternating by K/V"ó
+$CTwoFactor_AddAuthenticator_ResponseI
+shared_secret (B2‚µ.Shared secret between server and authenticatorI
+serial_number (B2‚µ.Authenticator serial number (unique per token)>
+revocation_code (	B%‚µ!code used to revoke authenticator+
+uri (	B‚µURI for QR code generation,
+server_time (B‚µCurrent server timeA
+account_name (	B+‚µ'Account name to display on token client3
+	token_gid (	B ‚µToken GID assigned by serverV
+identity_secret (B=‚µ9Secret used for identity attestation (e.g., for eventing))
+secret_1	 (B‚µSpare shared secret
+status
+ (B‚µResult code"Ý
+CTwoFactor_SendEmail_Request#
+steamid (B‚µSteamid to useF
+
+email_type (B2‚µ.Type of email to send (ETwoFactorEmailType::*)P
+include_activation_code (B/‚µ+Include activation code in email parameters"
+CTwoFactor_SendEmail_Response"Ã
++CTwoFactor_FinalizeAddAuthenticator_Request#
+steamid (B‚µsteamid to use1
+authenticator_code (	B‚µCurrent auth code:
+authenticator_time (B‚µCurrent authenticator timeE
+activation_code (	B,‚µ(Activation code from out-of-band message9
+http_headers (	B#‚µHTTP headers alternating by K/V"é
+,CTwoFactor_FinalizeAddAuthenticator_Response:
+success (B)‚µ%True if succeeded, or want more tries.
+	want_more (B‚µTrue if want more tries,
+server_time (B‚µCurrent server time
+status (B‚µResult code"Ë
+&CTwoFactor_RemoveAuthenticator_Request<
+revocation_code (	B#‚µPassword needed to remove tokenH
+revocation_reason (B-‚µ)Reason the authenticator is being removedO
+steamguard_scheme (B4‚µ0Type of Steam Guard to use once token is removedH
+remove_all_steamguard_cookies (B!‚µRemove all steamguard cookies"þ
+'CTwoFactor_RemoveAuthenticator_ResponseL
+success (B;‚µ7True if request succeeeded. The mobile app checks this.,
+server_time (B‚µCurrent server timeW
+revocation_attempts_remaining (B0‚µ,Number of revocation code attempts remaining"7
+'CTwoFactor_CreateEmergencyCodes_Request
+code (	"N
+(CTwoFactor_CreateEmergencyCodes_Response"
+codes (	B‚µEmergency codes"O
+(CTwoFactor_DestroyEmergencyCodes_Request#
+steamid (B‚µsteamid to use"+
+)CTwoFactor_DestroyEmergencyCodes_Response"F
+ CTwoFactor_ValidateToken_Request"
+code (	B‚µcode to validate"L
+!CTwoFactor_ValidateToken_Response'
+valid (B‚µresult of validation2„
+
+	TwoFactorŒ
+QueryStatus.CTwoFactor_Status_Request.CTwoFactor_Status_Response"D‚µ@Get two-factor authentication settings for the logged-in accountš
+AddAuthenticator$.CTwoFactor_AddAuthenticator_Request%.CTwoFactor_AddAuthenticator_Response"9‚µ5Add two-factor authenticator to the logged-in accounti
+	SendEmail.CTwoFactor_SendEmail_Request.CTwoFactor_SendEmail_Response"‚µSend email to the accountÁ
+FinalizeAddAuthenticator,.CTwoFactor_FinalizeAddAuthenticator_Request-.CTwoFactor_FinalizeAddAuthenticator_Response"H‚µDFinalize two-factor authentication addition to the logged-in account²
+RemoveAuthenticator'.CTwoFactor_RemoveAuthenticator_Request(.CTwoFactor_RemoveAuthenticator_Response"H‚µDRemove two-factor authentication addition from the logged-in account—
+CreateEmergencyCodes(.CTwoFactor_CreateEmergencyCodes_Request).CTwoFactor_CreateEmergencyCodes_Response"*‚µ&Generate emergency authenticator codes©
+DestroyEmergencyCodes).CTwoFactor_DestroyEmergencyCodes_Request*.CTwoFactor_DestroyEmergencyCodes_Response"9‚µ5Destroy emergency authenticator codes for the accountz
+ValidateToken!.CTwoFactor_ValidateToken_Request".CTwoFactor_ValidateToken_Response""‚µValidate (and consume) a token%‚µ!Two Factor Authentication ServiceB€

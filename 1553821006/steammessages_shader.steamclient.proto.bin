@@ -1,0 +1,33 @@
+
+&steammessages_shader.steamclient.proto,steammessages_unified_base.steamclient.proto"É
+CShader_RegisterShader_Request
+appid (
+gpu_desc (	
+driver_desc (	7
+shaders (2&.CShader_RegisterShader_Request.Shader8
+Shader
+cache_key_sha (
+shader_code_sha ("<
+CShader_RegisterShader_Response
+requested_codeids (" 
+CShader_SendShader_Request
+appid (7
+shaders (2&.CShader_SendShader_Request.ShaderCode:
+
+ShaderCode
+shader_code_sha (
+shader_code ("
+CShader_SendShader_Response"Y
+!CShader_GetBucketManifest_Request
+appid (
+gpu_desc (	
+driver_desc (	"K
+"CShader_GetBucketManifest_Response
+
+manifestid (
+	depotsize (2Ÿ
+Shader¾
+RegisterShader.CShader_RegisterShader_Request .CShader_RegisterShader_Response"i‚µeClient just finished playing a game, detected new shader cache entries and is notifying us about them
+
+SendShader.CShader_SendShader_Request.CShader_SendShader_Response"F‚µBClient is sending us actual compiled shader code that we requested­
+GetBucketManifest".CShader_GetBucketManifest_Request#.CShader_GetBucketManifest_Response"O‚µKClient wants to know the manifest ID to fetch (if any) for a bucket's depot‚µShader methodsB€

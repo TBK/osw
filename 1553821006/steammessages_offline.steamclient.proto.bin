@@ -1,0 +1,16 @@
+
+'steammessages_offline.steamclient.proto,steammessages_unified_base.steamclient.proto":
+&COffline_GetOfflineLogonTicket_Request
+priority ("W
+'COffline_GetOfflineLogonTicket_Response
+serialized_ticket (
+	signature ("0
+.COffline_GetUnsignedOfflineLogonTicket_Request"O
+COffline_OfflineLogonTicket
+	accountid (
+rtime32_creation_time ("_
+/COffline_GetUnsignedOfflineLogonTicket_Response,
+ticket (2.COffline_OfflineLogonTicket2£
+Offlineµ
+GetOfflineLogonTicket'.COffline_GetOfflineLogonTicket_Request(.COffline_GetOfflineLogonTicket_Response"I‚µEGet a serialized and signed offline logon ticket for the current userÁ
+GetUnsignedOfflineLogonTicket/.COffline_GetUnsignedOfflineLogonTicket_Request0.COffline_GetUnsignedOfflineLogonTicket_Response"=‚µ9Get an unsigned offline logon ticket for the current user‚µOffline settings serviceB€

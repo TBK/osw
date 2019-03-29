@@ -1,0 +1,111 @@
+
+*steammessages_deviceauth.steamclient.proto,steammessages_unified_base.steamclient.proto"X
++CDeviceAuth_GetOwnAuthorizedDevices_Request
+steamid (
+include_canceled ("¸
+,CDeviceAuth_GetOwnAuthorizedDevices_ResponseE
+devices (24.CDeviceAuth_GetOwnAuthorizedDevices_Response.DeviceÀ
+Device
+auth_device_token (
+device_name (	
+
+is_pending (
+is_canceled (
+last_time_used (
+last_borrower_id (
+last_app_played (
+
+is_limited ("…
+.CDeviceAuth_AcceptAuthorizationRequest_Request
+steamid (
+auth_device_token (
+	auth_code (
+from_steamid ("1
+/CDeviceAuth_AcceptAuthorizationRequest_Response"W
+)CDeviceAuth_AuthorizeRemoteDevice_Request
+steamid (
+auth_device_token (",
+*CDeviceAuth_AuthorizeRemoteDevice_Response"Y
++CDeviceAuth_DeauthorizeRemoteDevice_Request
+steamid (
+auth_device_token (".
+,CDeviceAuth_DeauthorizeRemoteDevice_Response"?
+,CDeviceAuth_GetUsedAuthorizedDevices_Request
+steamid ("ú
+-CDeviceAuth_GetUsedAuthorizedDevices_ResponseF
+devices (25.CDeviceAuth_GetUsedAuthorizedDevices_Response.Device€
+Device
+auth_device_token (
+device_name (	
+owner_steamid (
+last_time_used (
+last_app_played ("p
+*CDeviceAuth_GetAuthorizedBorrowers_Request
+steamid (
+include_canceled (
+include_pending ("Ó
++CDeviceAuth_GetAuthorizedBorrowers_ResponseH
+	borrowers (25.CDeviceAuth_GetAuthorizedBorrowers_Response.BorrowerZ
+Borrower
+steamid (
+
+is_pending (
+is_canceled (
+time_created ("W
+*CDeviceAuth_AddAuthorizedBorrowers_Request
+steamid (
+steamid_borrower ("F
++CDeviceAuth_AddAuthorizedBorrowers_Response
+seconds_to_wait ("Z
+-CDeviceAuth_RemoveAuthorizedBorrowers_Request
+steamid (
+steamid_borrower ("0
+.CDeviceAuth_RemoveAuthorizedBorrowers_Response"q
++CDeviceAuth_GetAuthorizedAsBorrower_Request
+steamid (
+include_canceled (
+include_pending ("à
+,CDeviceAuth_GetAuthorizedAsBorrower_ResponseE
+lenders (24.CDeviceAuth_GetAuthorizedAsBorrower_Response.Lenderi
+Lender
+steamid (
+time_created (
+
+is_pending (
+is_canceled (
+is_used ("@
+-CDeviceAuth_GetExcludedGamesInLibrary_Request
+steamid ("æ
+.CDeviceAuth_GetExcludedGamesInLibrary_ResponseT
+excluded_games (2<.CDeviceAuth_GetExcludedGamesInLibrary_Response.ExcludedGame^
+ExcludedGame
+appid (
+	game_name (	
+
+vac_banned (
+package_excluded ("=
+*CDeviceAuth_GetBorrowerPlayHistory_Request
+steamid ("¸
++CDeviceAuth_GetBorrowerPlayHistory_ResponseR
+lender_history (2:.CDeviceAuth_GetBorrowerPlayHistory_Response.LenderHistoryC
+GameHistory
+appid (
+	time_last (
+
+time_total (p
+LenderHistory
+steamid (N
+game_history (28.CDeviceAuth_GetBorrowerPlayHistory_Response.GameHistory2Â
+
+DeviceAuthš
+GetOwnAuthorizedDevices,.CDeviceAuth_GetOwnAuthorizedDevices_Request-.CDeviceAuth_GetOwnAuthorizedDevices_Response""‚µGet list of authorized devicesµ
+AcceptAuthorizationRequest/.CDeviceAuth_AcceptAuthorizationRequest_Request0.CDeviceAuth_AcceptAuthorizationRequest_Response"4‚µ0Accept an authorization request by another usersª
+AuthorizeRemoteDevice*.CDeviceAuth_AuthorizeRemoteDevice_Request+.CDeviceAuth_AuthorizeRemoteDevice_Response"8‚µ4Authorize own remote device that has pending request›
+DeauthorizeRemoteDevice,.CDeviceAuth_DeauthorizeRemoteDevice_Request-.CDeviceAuth_DeauthorizeRemoteDevice_Response"#‚µRevoke own device authorization»
+GetUsedAuthorizedDevices-.CDeviceAuth_GetUsedAuthorizedDevices_Request..CDeviceAuth_GetUsedAuthorizedDevices_Response"@‚µ<Get list of authorized devices user played borrowed games on²
+GetAuthorizedBorrowers+.CDeviceAuth_GetAuthorizedBorrowers_Request,.CDeviceAuth_GetAuthorizedBorrowers_Response"=‚µ9Get list of users that can borrow on an authorized device°
+AddAuthorizedBorrowers+.CDeviceAuth_AddAuthorizedBorrowers_Request,.CDeviceAuth_AddAuthorizedBorrowers_Response";‚µ7Add users that can borrow on limited authorized devices¼
+RemoveAuthorizedBorrowers..CDeviceAuth_RemoveAuthorizedBorrowers_Request/.CDeviceAuth_RemoveAuthorizedBorrowers_Response">‚µ:Remove users that can borrow on limited authorized devices¹
+GetAuthorizedAsBorrower,.CDeviceAuth_GetAuthorizedAsBorrower_Request-.CDeviceAuth_GetAuthorizedAsBorrower_Response"A‚µ=Get list of lenders that authorized given account as borrower¯
+GetExcludedGamesInLibrary..CDeviceAuth_GetExcludedGamesInLibrary_Request/.CDeviceAuth_GetExcludedGamesInLibrary_Response"1‚µ-Get list of excluded games in lenders libraryš
+GetBorrowerPlayHistory+.CDeviceAuth_GetBorrowerPlayHistory_Request,.CDeviceAuth_GetBorrowerPlayHistory_Response"%‚µ!Get list played games as borrower$‚µ Library Sharing settings serviceB€

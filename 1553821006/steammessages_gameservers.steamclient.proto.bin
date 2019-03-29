@@ -1,0 +1,42 @@
+
++steammessages_gameservers.steamclient.proto,steammessages_unified_base.steamclient.proto"Ÿ
+"CGameServers_GetServerList_Request(
+filter (	B‚µQuery filter string.O
+limit (:100B;‚µ7The maximum number of servers to return in the response"à
+#CGameServers_GetServerList_Responsee
+servers (2+.CGameServers_GetServerList_Response.ServerB'‚µ#List of servers matching the filterÑ
+Server0
+addr (	B"‚µThe server's IP and query port
+gameport (
+specport (
+steamid (
+name (	
+appid (
+gamedir (	
+version (	
+product	 (	
+region
+ (
+players (
+max_players (
+bots (
+map (	
+secure (
+	dedicated (
+
+os (	
+gametype (	"@
+*CGameServers_GetServerSteamIDsByIP_Request
+
+server_ips (	"
+%CGameServers_IPsWithSteamIDs_Response>
+servers (2-.CGameServers_IPsWithSteamIDs_Response.Server'
+Server
+addr (	
+steamid ("E
+*CGameServers_GetServerIPsBySteamID_Request
+server_steamids (2«
+GameServersŒ
+GetServerList#.CGameServers_GetServerList_Request$.CGameServers_GetServerList_Response"0‚µ,Gets a list of servers given a filter string¤
+GetServerSteamIDsByIP+.CGameServers_GetServerSteamIDsByIP_Request&.CGameServers_IPsWithSteamIDs_Response"6‚µ2Gets a list of server SteamIDs given a list of IPs­
+GetServerIPsBySteamID+.CGameServers_GetServerIPsBySteamID_Request&.CGameServers_IPsWithSteamIDs_Response"?‚µ;Gets a list of server IP addresses given a list of SteamIDs6‚µ2A service for searching and managing game servers.B€

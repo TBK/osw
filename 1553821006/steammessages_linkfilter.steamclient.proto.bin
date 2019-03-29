@@ -1,0 +1,23 @@
+
+*steammessages_linkfilter.steamclient.proto,steammessages_unified_base.steamclient.proto"ù
+,CCommunity_GetLinkFilterHashPrefixes_RequestG
+hit_type (B5Çµ1The retrieved hits will be filtered to this type.\
+count (BMÇµIThe number of hits to retrieve in a single batch. Specify 0 for no limit.F
+start (B7Çµ3The starting count when retrieving hits in batches."á
+-CCommunity_GetLinkFilterHashPrefixes_ResponseV
+hash_prefixes (B?Çµ;The first 32 bits of the SHA1 hashes of each hit requested."ó
+&CCommunity_GetLinkFilterHashes_RequestG
+hit_type (B5Çµ1The retrieved hits will be filtered to this type.\
+count (BMÇµIThe number of hits to retrieve in a single batch. Specify 0 for no limit.F
+start (B7Çµ3The starting count when retrieving hits in batches."j
+'CCommunity_GetLinkFilterHashes_Response?
+hashes (B/Çµ+A list of hashes returned from our request."Ä
++CCommunity_GetLinkFilterListVersion_RequestQ
+hit_type (B?Çµ;The version hashes for this type's chunks will be returned."™
+,CCommunity_GetLinkFilterListVersion_ResponseF
+version (	B5Çµ1A hash built using the IDs of the contained hits.2
+count (B#ÇµThe number of hits of this type2∆
+CommunityLinkFilter“
+GetLinkFilterHashPrefixes-.CCommunity_GetLinkFilterHashPrefixes_Request..CCommunity_GetLinkFilterHashPrefixes_Response"VÇµRGet a list of hash prefixes for the specified hit type, to use for client caching.π
+GetLinkFilterHashes'.CCommunity_GetLinkFilterHashes_Request(.CCommunity_GetLinkFilterHashes_Response"OÇµKGet a list of hashes for the specified hit type, to use for client caching.Õ
+GetLinkFilterListVersion,.CCommunity_GetLinkFilterListVersion_Request-.CCommunity_GetLinkFilterListVersion_Response"TÇµPGet a list of hashes describing the version of each chunk of the requested size.NÇµJA service for recording data about Steam Community phishing link filteringBÄ

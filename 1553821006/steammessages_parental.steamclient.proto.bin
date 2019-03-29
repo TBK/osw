@@ -1,0 +1,98 @@
+
+(steammessages_parental.steamclient.proto,steammessages_unified_base.steamclient.proto"0
+ParentalApp
+appid (
+
+is_allowed ("¨
+ParentalSettings
+steamid (
+applist_base_id ( 
+applist_base_description (	"
+applist_base (2.ParentalApp$
+applist_custom (2.ParentalApp
+passwordhashtype (
+salt (
+passwordhash (
+
+is_enabled	 (
+enabled_features
+ (
+recovery_email (	"ô
+(CParental_EnableParentalSettings_Request
+password (	#
+settings (2.ParentalSettings
+	sessionid (	
+
+enablecode (
+steamid
+ ("+
+)CParental_EnableParentalSettings_Response"N
+)CParental_DisableParentalSettings_Request
+password (	
+steamid
+ (",
+*CParental_DisableParentalSettings_Response"8
+%CParental_GetParentalSettings_Request
+steamid
+ ("M
+&CParental_GetParentalSettings_Response#
+settings (2.ParentalSettings"?
++CParental_GetSignedParentalSettings_Request
+priority ("^
+,CParental_GetSignedParentalSettings_Response
+serialized_settings (
+	signature ("ò
+%CParental_SetParentalSettings_Request
+password (	#
+settings (2.ParentalSettings
+new_password (	
+	sessionid (	
+steamid
+ ("(
+&CParental_SetParentalSettings_Response"7
+CParental_ValidateToken_Request
+unlock_token (	""
+ CParental_ValidateToken_Response"g
+"CParental_ValidatePassword_Request
+password (	
+session (	
+send_unlock_on_success ("4
+#CParental_ValidatePassword_Response
+token (	"/
+CParental_LockClient_Request
+session (	"
+CParental_LockClient_Response"'
+%CParental_RequestRecoveryCode_Request"(
+&CParental_RequestRecoveryCode_Response"S
+)CParental_DisableWithRecoveryCode_Request
+recovery_code (
+steamid
+ (",
+*CParental_DisableWithRecoveryCode_Response"Ñ
+-CParental_ParentalSettingsChange_Notification
+serialized_settings (
+	signature (
+password (	
+	sessionid (	"L
+%CParental_ParentalUnlock_Notification
+password (	
+	sessionid (	"8
+#CParental_ParentalLock_Notification
+	sessionid (	2“
+Parental–
+EnableParentalSettings).CParental_EnableParentalSettings_Request*.CParental_EnableParentalSettings_Response"_Çµ[Enable parental settings for the logged in account, optionally setting the current settings´
+DisableParentalSettings*.CParental_DisableParentalSettings_Request+.CParental_DisableParentalSettings_Response"7Çµ3Disable parental settings for the logged in accountß
+GetParentalSettings&.CParental_GetParentalSettings_Request'.CParental_GetParentalSettings_Response"?Çµ;Get the current parental settings for the logged in accountË
+GetSignedParentalSettings,.CParental_GetSignedParentalSettings_Request-.CParental_GetSignedParentalSettings_Response"nÇµjGet the current parental settings for the logged in account in a form that can by verified by the receiverß
+SetParentalSettings&.CParental_SetParentalSettings_Request'.CParental_SetParentalSettings_Response"?Çµ;Set the current parental settings for the logged in accountß
+ValidateToken .CParental_ValidateToken_Request!.CParental_ValidateToken_Response"QÇµMCheck if the given parental unlock token is correct for the logged in account∑
+ValidatePassword#.CParental_ValidatePassword_Request$.CParental_ValidatePassword_Response"XÇµTValidate the plaintext password for the logged in account and return an unlock tokenè
+
+LockClient.CParental_LockClient_Request.CParental_LockClient_Response"BÇµ>Notify connected clients that a lock has occurred in a browser√
+RequestRecoveryCode&.CParental_RequestRecoveryCode_Request'.CParental_RequestRecoveryCode_Response"[ÇµWRequest a recovery code be sent to the recovery email address for the specified account™
+DisableWithRecoveryCode*.CParental_DisableWithRecoveryCode_Request+.CParental_DisableWithRecoveryCode_Response"6Çµ2Attempt a recovery unlock on the specified accountÇµParental settings service2Ü
+ParentalClientú
+NotifySettingsChange..CParental_ParentalSettingsChange_Notification.NoResponse"GÇµCNotification from server to client of a change in parental settingsî
+NotifyUnlock&.CParental_ParentalUnlock_Notification.NoResponse"OÇµKNotification from server to client that an unlock has occurred in a browserç
+
+NotifyLock$.CParental_ParentalLock_Notification.NoResponse"LÇµHNotification from server to client that a lock has occurred in a browser.Çµ&Parental settings client notifications¿µBÄ

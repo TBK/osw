@@ -1,0 +1,845 @@
+
+"steammessages_clientserver_2.protosteammessages_base.proto"
+CMsgClientUCMAddScreenshot
+appid (
+filename (	
+	thumbname (	
+vr_filename (	
+rtime32_created (
+width (
+height (
+permissions (
+caption (	
+shortcut_name	 (	,
+tag
+ (2.CMsgClientUCMAddScreenshot.Tag
+tagged_steamid (
+spoiler_tag (
+tagged_publishedfileid (*
+Tag
+tag_name (	
+	tag_value (	"d
+"CMsgClientUCMAddScreenshotResponse
+eresult (:2*
+screenshotid (:18446744073709551615"K
+CMsgClientUCMDeleteScreenshot*
+screenshotid (:18446744073709551615";
+%CMsgClientUCMDeleteScreenshotResponse
+eresult (:2"Ñ
+CMsgClientUCMPublishFile
+app_id (
+	file_name (	
+preview_file_name (	
+consumer_app_id (
+title (	
+description (	
+tags (	
+workshop_file	 (
+
+visibility
+ (
+	file_type (
+url (	
+video_provider (
+video_account_name (	
+video_identifier (	
+in_progress ("¡
+ CMsgClientUCMPublishFileResponse
+eresult (:2/
+published_file_id (:184467440737095516158
+)needs_workshop_legal_agreement_acceptance (:false"œ
+ CMsgClientUCMUpdatePublishedFile
+app_id (
+published_file_id (
+	file_name (	
+preview_file_name (	
+title (	
+description (	
+tags (	
+
+visibility (
+update_file	 (
+update_preview_file
+ (
+update_title (
+update_description (
+update_tags (
+update_visibility (
+change_description (	
+
+update_url (
+url (	
+update_content_manifest (
+content_manifest (
+metadata (	
+update_metadata (
+language (:0
+removed_kvtags (	=
+kvtags (2-.CMsgClientUCMUpdatePublishedFile.KeyValueTagE
+previews (23.CMsgClientUCMUpdatePublishedFile.AdditionalPreview
+previews_to_remove (
+clear_in_progress ()
+KeyValueTag
+key (	
+value (	Œ
+AdditionalPreview
+original_file_name (	
+internal_file_name (	
+videoid (	
+preview_type (
+update_index (:-1"x
+(CMsgClientUCMUpdatePublishedFileResponse
+eresult (:28
+)needs_workshop_legal_agreement_acceptance (:false"M
+ CMsgClientUCMDeletePublishedFile
+published_file_id (
+app_id (">
+(CMsgClientUCMDeletePublishedFileResponse
+eresult (:2"c
+(CMsgClientUCMEnumerateUserPublishedFiles
+app_id (
+start_index (
+
+sort_order ("ç
+0CMsgClientUCMEnumerateUserPublishedFilesResponse
+eresult (:2Z
+published_files (2A.CMsgClientUCMEnumerateUserPublishedFilesResponse.PublishedFileId
+total_results (,
+PublishedFileId
+published_file_id ("˜
+)CMsgClientUCMEnumerateUserSubscribedFiles
+app_id (
+start_index (
+	list_type (:1
+matching_file_type (:0
+count (:50"‰
+1CMsgClientUCMEnumerateUserSubscribedFilesResponse
+eresult (:2\
+subscribed_files (2B.CMsgClientUCMEnumerateUserSubscribedFilesResponse.PublishedFileId
+total_results (K
+PublishedFileId
+published_file_id (
+rtime32_subscribed (:0"o
+4CMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
+app_id (
+start_index (
+
+start_time ("‘
+<CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
+eresult (:2g
+subscribed_files (2M.CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse.PublishedFileId
+total_results (¼
+PublishedFileId
+published_file_id (
+rtime32_subscribed (:0
+appid (
+file_hcontent (
+	file_size (
+rtime32_last_updated (
+is_depot_content ("Æ
+$CMsgClientUCMPublishedFileSubscribed
+published_file_id (
+app_id (
+file_hcontent (
+	file_size (
+rtime_subscribed (
+is_depot_content (
+rtime_updated ("S
+&CMsgClientUCMPublishedFileUnsubscribed
+published_file_id (
+app_id ("N
+!CMsgClientUCMPublishedFileDeleted
+published_file_id (
+app_id ("£
+!CMsgClientUCMPublishedFileUpdated
+published_file_id (
+app_id (
+time_updated (
+hcontent (
+	file_size (
+is_depot_content ("k
+$CMsgClientWorkshopItemChangesRequest
+app_id (
+last_time_updated (
+num_items_needed ("û
+%CMsgClientWorkshopItemChangesResponse
+eresult (:2
+update_time (O
+workshop_items (27.CMsgClientWorkshopItemChangesResponse.WorkshopItemInfoX
+WorkshopItemInfo
+published_file_id (
+time_updated (
+manifest_id ("Ø
+!CMsgClientWorkshopItemInfoRequest
+app_id (
+last_time_updated (G
+workshop_items (2/.CMsgClientWorkshopItemInfoRequest.WorkshopItem?
+WorkshopItem
+published_file_id (
+time_updated ("Ÿ
+"CMsgClientWorkshopItemInfoResponse
+eresult (:2
+update_time (L
+workshop_items (24.CMsgClientWorkshopItemInfoResponse.WorkshopItemInfo
+private_items (k
+WorkshopItemInfo
+published_file_id (
+time_updated (
+manifest_id (
+	is_legacy ("”
+%CMsgClientUCMGetPublishedFilesForUser
+app_id (
+creator_steam_id (
+required_tags (	
+excluded_tags (	
+start_index ("á
+-CMsgClientUCMGetPublishedFilesForUserResponse
+eresult (:2W
+published_files (2>.CMsgClientUCMGetPublishedFilesForUserResponse.PublishedFileId
+total_results (,
+PublishedFileId
+published_file_id ("d
+'CMsgClientUCMSetUserPublishedFileAction
+published_file_id (
+app_id (
+action ("E
+/CMsgClientUCMSetUserPublishedFileActionResponse
+eresult (:2"g
+0CMsgClientUCMEnumeratePublishedFilesByUserAction
+app_id (
+start_index (
+action ("”
+8CMsgClientUCMEnumeratePublishedFilesByUserActionResponse
+eresult (:2b
+published_files (2I.CMsgClientUCMEnumeratePublishedFilesByUserActionResponse.PublishedFileId
+total_results (I
+PublishedFileId
+published_file_id (
+rtime_time_stamp (:0"
+CMsgClientScreenshotsChanged"w
+CMsgClientUpdateUserGameInfo
+steamid_idgs (
+gameid (
+game_ip (
+	game_port (
+token ("S
+CMsgClientRichPresenceUpload
+rich_presence_kv (
+steamid_broadcast ("8
+CMsgClientRichPresenceRequest
+steamid_request ("
+CMsgClientRichPresenceInfo?
+rich_presence (2(.CMsgClientRichPresenceInfo.RichPresence>
+RichPresence
+steamid_user (
+rich_presence_kv (".
+CMsgClientCheckFileSignature
+app_id ("÷
+$CMsgClientCheckFileSignatureResponse
+app_id (
+pid (
+eresult (
+filename (	
+esignatureresult (
+sha_file (
+signatureheader (
+filesize (
+getlasterror	 ("
+evalvesignaturecheckdetail
+ ("P
+CMsgClientReadMachineAuth
+filename (	
+offset (
+	cubtoread ("Î
+!CMsgClientReadMachineAuthResponse
+filename (	
+eresult (
+filesize (
+sha_file (
+getlasterror (
+offset (
+cubread (
+
+bytes_read (
+filename_sentry	 (	"½
+CMsgClientUpdateMachineAuth
+filename (	
+offset (
+
+cubtowrite (
+bytes (
+otp_type (
+otp_identifier (	
+otp_sharedsecret (
+otp_timedrift ("á
+#CMsgClientUpdateMachineAuthResponse
+filename (	
+eresult (
+filesize (
+sha_file (
+getlasterror (
+offset (
+cubwrote (
+otp_type (
+	otp_value	 (
+otp_identifier
+ (	"¡
+CMsgClientRequestMachineAuth
+filename (	
+eresult_sentryfile (
+filesize (
+sha_sentryfile (
+lock_account_action (
+otp_type (
+otp_identifier (	
+otp_sharedsecret	 (
+	otp_value
+ (
+machine_name (	
+machine_name_userchosen (	"7
+$CMsgClientRequestMachineAuthResponse
+eresult ("$
+CMsgClientRegisterKey
+key (	"p
+CMsgClientPurchaseResponse
+eresult (:2
+purchase_result_details (
+purchase_receipt_info ("Å
+CMsgClientActivateOEMLicense
+bios_manufacturer (	
+bios_serialnumber (	
+license_file (
+mainboard_manufacturer (	
+mainboard_product (	
+mainboard_serialnumber (	"9
+CMsgClientRegisterOEMMachine
+oem_register_file ("7
+$CMsgClientRegisterOEMMachineResponse
+eresult ("K
+CMsgClientPurchaseWithMachineID
+
+package_id (
+machine_info ("g
+ CMsgTrading_InitiateTradeRequest
+trade_request_id (
+other_steamid (
+
+other_name (	"Ò
+!CMsgTrading_InitiateTradeResponse
+response (
+trade_request_id (
+other_steamid ( 
+steamguard_required_days ( 
+new_device_cooldown_days (-
+%default_password_reset_probation_days (%
+password_reset_probation_days (+
+#default_email_change_probation_days (#
+email_change_probation_days	 ("7
+CMsgTrading_CancelTradeRequest
+other_steamid ("1
+CMsgTrading_StartSession
+other_steamid ("P
+CMsgClientGetCDNAuthToken
+depot_id (
+	host_name (	
+app_id ("C
+CMsgClientGetDepotDecryptionKey
+depot_id (
+app_id ("m
+'CMsgClientGetDepotDecryptionKeyResponse
+eresult (:2
+depot_id (
+depot_encryption_key ("F
+CMsgClientCheckAppBetaPassword
+app_id (
+betapassword (	"Á
+&CMsgClientCheckAppBetaPasswordResponse
+eresult (:2K
+betapasswords (24.CMsgClientCheckAppBetaPasswordResponse.BetaPassword6
+BetaPassword
+betaname (	
+betapassword (	"­
+CMsgClientUpdateAppJobReport
+app_id (
+	depot_ids (
+	app_state (
+job_app_error (
+error_details (	
+job_duration (
+files_validation_failed (
+job_bytes_downloaded (
+job_bytes_staged	 (
+bytes_comitted
+ (
+start_app_state (
+stats_machine_id (
+branch_name (	
+total_bytes_downloaded (
+total_bytes_staged (
+total_bytes_restored (
+is_borrowed (
+is_free_weekend (
+total_bytes_legacy (
+total_bytes_patched (
+total_bytes_saved ("Ë
+CMsgClientDPContentStatsReport
+stats_machine_id (
+country_code (	
+os_type (
+language (
+num_install_folders (
+num_installed_games (
+size_installed_games ("_
+!CMsgClientGetCDNAuthTokenResponse
+eresult (:2
+token (	
+expiration_time ("á
+CMsgDownloadRateStatistics
+cell_id (4
+stats (2%.CMsgDownloadRateStatistics.StatsInfo|
+	StatsInfo
+source_type (
+	source_id (
+seconds (
+bytes (
+	host_name (	
+microseconds ("H
+CMsgClientRequestAccountData
+account_or_email (	
+action ("×
+$CMsgClientRequestAccountDataResponse
+action (
+eresult (
+account_name (	
+
+ct_matches ( 
+account_name_suggestion1 (	 
+account_name_suggestion2 (	 
+account_name_suggestion3 (	"™
+CMsgClientUGSGetGlobalStats
+gameid (
+history_days_requested (
+time_last_requested (
+first_day_cached (
+days_cached ("•
+#CMsgClientUGSGetGlobalStatsResponse
+eresult (:2
+	timestamp (
+day_current (6
+days (2(.CMsgClientUGSGetGlobalStatsResponse.Dayz
+Day
+day_id (<
+stats (2-.CMsgClientUGSGetGlobalStatsResponse.Day.Stat%
+Stat
+stat_id (
+data ("Ô
+CMsgGameServerData
+steam_id_gs (
+
+ip (
+
+query_port (
+	game_port (
+sourcetv_port (
+name (	
+app_id (
+gamedir (	
+version (	
+product	 (	
+region
+ (	+
+players (2.CMsgGameServerData.Player
+max_players (
+	bot_count (
+password (
+secure (
+	dedicated (
+
+os (	
+	game_data (	
+game_data_version (
+	game_type (	
+map (	
+Player
+steam_id ("H
+CMsgGameServerRemove
+steam_id (
+
+ip (
+
+query_port ("‚
+CMsgClientGMSServerQuery
+app_id (
+geo_location_ip (
+region_code (
+filter_text (	
+max_servers ("´
+ CMsgGMSClientServerQueryResponse9
+servers (2(.CMsgGMSClientServerQueryResponse.Server
+error (	F
+Server
+	server_ip (
+server_port (
+auth_players ("O
+CMsgGameServerOutOfDate
+steam_id_gs (
+reject (
+message (	"2
+CMsgClientRedeemGuestPass
+guest_pass_id ("c
+!CMsgClientRedeemGuestPassResponse
+eresult (:2
+
+package_id (
+must_own_appid ("8
+CMsgClientGetClanActivityCounts
+steamid_clans ("=
+'CMsgClientGetClanActivityCountsResponse
+eresult (:2"y
+CMsgClientOGSReportString
+accumulated (
+	sessionid (
+severity (
+	formatter (	
+varargs ("P
+CMsgClientOGSReportBug
+	sessionid (
+bugtext (	
+
+screenshot ("0
+CMsgGSAssociateWithClan
+steam_id_clan ("L
+CMsgGSAssociateWithClanResponse
+steam_id_clan (
+eresult (:2"A
+#CMsgGSComputeNewPlayerCompatibility
+steam_id_candidate ("Ï
++CMsgGSComputeNewPlayerCompatibilityResponse
+steam_id_candidate (
+eresult (:2
+is_clan_member (
+ct_dont_like_you (
+ct_you_dont_like ($
+ct_clanmembers_dont_like_you ("
+CMsgClientSentLogs"l
+CMsgGCClient
+appid (
+msgtype (
+payload (
+steamid (
+gcname (	
+
+ip (".
+CMsgClientRequestFreeLicense
+appids ("n
+$CMsgClientRequestFreeLicenseResponse
+eresult (:2
+granted_packageids (
+granted_appids ("Ó
+#CMsgDRMDownloadRequestWithCrashData
+download_flags (
+download_types_known (
+guid_drm (
+
+guid_split (
+
+guid_merge (
+module_name (	
+module_path (	
+
+crash_data ("Û
+CMsgDRMDownloadResponse
+eresult (:2
+app_id (
+blob_download_type (
+
+merge_guid (
+download_file_dfs_ip (
+download_file_dfs_port (
+download_file_url (	
+module_path (	"×
+CMsgDRMFinalResult
+eResult (:2
+app_id (
+blob_download_type (
+error_detail (
+
+merge_guid (
+download_file_dfs_ip (
+download_file_dfs_port (
+download_file_url (	"3
+CMsgClientDPCheckSpecialSurvey
+	survey_id ("–
+&CMsgClientDPCheckSpecialSurveyResponse
+eResult (:2
+state (
+name (	
+
+custom_url (	
+include_software (
+token ("H
+%CMsgClientDPSendSpecialSurveyResponse
+	survey_id (
+data ("O
+*CMsgClientDPSendSpecialSurveyResponseReply
+eResult (:2
+token ("W
+'CMsgClientRequestForgottenPasswordEmail
+account_name (	
+password_tried (	"_
+/CMsgClientRequestForgottenPasswordEmailResponse
+eResult (
+use_secret_question ("6
+CMsgClientItemAnnouncements
+count_new_items ("$
+"CMsgClientRequestItemAnnouncements"ž
+CMsgClientUserNotifications@
+notifications (2).CMsgClientUserNotifications.Notification=
+Notification
+user_notification_type (
+count ("ˆ
+CMsgClientCommentNotifications
+count_new_comments ( 
+count_new_comments_owner ((
+ count_new_comments_subscriptions ("'
+%CMsgClientRequestCommentNotifications"g
+$CMsgClientOfflineMessageNotification
+offline_messages (%
+friends_with_offline_messages ("&
+$CMsgClientRequestOfflineMessageCount"8
+%CMsgClientChatGetFriendMessageHistory
+steamid ("ù
+-CMsgClientChatGetFriendMessageHistoryResponse
+steamid (
+success (N
+messages (2<.CMsgClientChatGetFriendMessageHistoryResponse.FriendMessageV
+FriendMessage
+	accountid (
+	timestamp (
+message (	
+unread ("9
+7CMsgClientChatGetFriendMessageHistoryForOfflineMessages"7
+!CMsgClientFSGetFriendsSteamLevels
+
+accountids ("›
+)CMsgClientFSGetFriendsSteamLevelsResponseB
+friends (21.CMsgClientFSGetFriendsSteamLevelsResponse.Friend*
+Friend
+	accountid (
+level ("ë
+CMsgClientEmailAddrInfo
+email_address (	
+email_is_validated ( 
+email_validation_changed ('
+credential_change_requires_code (1
+)password_or_secretqa_change_requires_code (
+remind_user_about_email ("·
+CMsgCREEnumeratePublishedFiles
+app_id (
+
+query_type (
+start_index (
+days (
+count (
+tags (	
+	user_tags (	
+matching_file_type (:13"
+&CMsgCREEnumeratePublishedFilesResponse
+eresult (:2P
+published_files (27.CMsgCREEnumeratePublishedFilesResponse.PublishedFileId
+total_results (v
+PublishedFileId
+published_file_id (
+	votes_for (
+votes_against (
+reports (
+score ("‹
+CMsgCREItemVoteSummaryC
+published_file_ids (2'.CMsgCREItemVoteSummary.PublishedFileId,
+PublishedFileId
+published_file_id ("ú
+CMsgCREItemVoteSummaryResponse
+eresult (:2L
+item_vote_summaries (2/.CMsgCREItemVoteSummaryResponse.ItemVoteSummaryv
+ItemVoteSummary
+published_file_id (
+	votes_for (
+votes_against (
+reports (
+score ("P
+"CMsgCREUpdateUserPublishedItemVote
+published_file_id (
+vote_up ("@
+*CMsgCREUpdateUserPublishedItemVoteResponse
+eresult (:2"«
+&CMsgCREGetUserPublishedItemVoteDetailsS
+published_file_ids (27.CMsgCREGetUserPublishedItemVoteDetails.PublishedFileId,
+PublishedFileId
+published_file_id ("ê
+.CMsgCREGetUserPublishedItemVoteDetailsResponse
+eresult (:2b
+user_item_vote_details (2B.CMsgCREGetUserPublishedItemVoteDetailsResponse.UserItemVoteDetail@
+UserItemVoteDetail
+published_file_id (
+vote (:0"¹
+CMsgGameServerPingSample
+my_ip (
+	gs_app_id (4
+
+gs_samples (2 .CMsgGameServerPingSample.SampleE
+Sample
+
+ip (
+avg_ping_ms (
+stddev_ping_ms_x10 ("*
+CMsgFSGetFollowerCount
+steam_id ("F
+CMsgFSGetFollowerCountResponse
+eresult (:2
+count (:0"(
+CMsgFSGetIsFollowing
+steam_id ("O
+CMsgFSGetIsFollowingResponse
+eresult (:2
+is_following (:false"3
+CMsgFSEnumerateFollowingList
+start_index ("d
+$CMsgFSEnumerateFollowingListResponse
+eresult (:2
+total_results (
+	steam_ids ("0
+CMsgDPGetNumberOfCurrentPlayers
+appid ("S
+'CMsgDPGetNumberOfCurrentPlayersResponse
+eresult (:2
+player_count ("a
+#CMsgClientFriendUserStatusPublished
+friend_steamid (
+appid (
+status_text (	"b
+CMsgClientServiceMethod
+method_name (	
+serialized_method (
+is_notification ("Z
+CMsgClientServiceMethodResponse
+method_name (	"
+serialized_method_response ("5
+CMsgClientUIMode
+uimode (
+	chat_mode ("<
+&CMsgClientVanityURLChangedNotification
+
+vanity_url (	"y
+%CMsgClientAuthorizeLocalDeviceRequest
+device_description (	
+owner_account_id (
+local_device_token ("k
+CMsgClientAuthorizeLocalDevice
+eresult (:2
+owner_account_id (
+authed_device_token ("v
+*CMsgClientAuthorizeLocalDeviceNotification
+eresult (:2
+owner_account_id (
+local_device_token ("n
+"CMsgClientDeauthorizeDeviceRequest"
+deauthorization_account_id ($
+deauthorization_device_token ("U
+CMsgClientDeauthorizeDevice
+eresult (:2"
+deauthorization_account_id ("Ñ
+&CMsgClientUseLocalDeviceAuthorizations 
+authorization_account_id (J
+device_tokens (23.CMsgClientUseLocalDeviceAuthorizations.DeviceToken9
+DeviceToken
+owner_account_id (
+token_id (" 
+CMsgClientGetAuthorizedDevices"­
+&CMsgClientGetAuthorizedDevicesResponse
+eresult (:2S
+authorized_device (28.CMsgClientGetAuthorizedDevicesResponse.AuthorizedDevice™
+AuthorizedDevice
+auth_device_token (
+device_name (	
+last_access_time (
+borrower_id (
+
+is_pending (
+
+app_played ("Â
+!CMsgClientSharedLibraryLockStatusH
+locked_library (20.CMsgClientSharedLibraryLockStatus.LockedLibrary
+own_library_locked_by (4
+LockedLibrary
+owner_id (
+	locked_by ("§
+"CMsgClientSharedLibraryStopPlaying
+seconds_left (>
+	stop_apps (2+.CMsgClientSharedLibraryStopPlaying.StopApp+
+StopApp
+app_id (
+owner_id ("ñ
+CMsgClientServiceCall
+sysid_routing (
+call_handle (
+
+module_crc (
+module_hash (
+function_id (
+cub_output_max (
+flags (
+callparameter (
+	ping_only	 (
+max_outstanding_calls
+ ("Z
+CMsgClientServiceModule
+
+module_crc (
+module_hash (
+module_content ("¸
+CMsgClientServiceCallResponse
+sysid_routing (
+call_handle (
+
+module_crc (
+module_hash (
+ecallresult (
+result_content (
+os_version_info (
+system_info (
+load_address	 (
+exception_record
+ ( 
+portable_os_version_info (
+portable_system_info (
+was_converted (
+internal_result (
+current_count (
+last_call_handle (
+last_call_module_crc (
+last_call_sysid_routing (
+last_ecallresult (
+last_callissue_delta (
+last_callcomplete_delta ("
+CMsgAMUnlockStreaming"K
+CMsgAMUnlockStreamingResponse
+eresult (:2
+encryption_key ("
+CMsgAMUnlockHEVC".
+CMsgAMUnlockHEVCResponse
+eresult (:2"M
+CMsgClientPlayingSessionState
+playing_blocked (
+playing_app ("6
+CMsgClientKickPlayingSession
+only_stop_game ("v
+CMsgClientVoiceCallPreAuthorize
+caller_steamid (
+receiver_steamid (
+	caller_id (
+hangup ("‚
+'CMsgClientVoiceCallPreAuthorizeResponse
+caller_steamid (
+receiver_steamid (
+eresult (:2
+	caller_id (BH€ 

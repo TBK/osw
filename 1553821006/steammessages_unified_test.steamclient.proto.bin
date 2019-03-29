@@ -1,0 +1,20 @@
+
+,steammessages_unified_test.steamclient.proto,steammessages_unified_base.steamclient.proto"G
+ CMsgTest_MessageToClient_Request#
+	some_text (	BÇµSome string."H
+!CMsgTest_MessageToClient_Response#
+	some_text (	BÇµSome string."I
+"CMsgTest_NotifyClient_Notification#
+	some_text (	BÇµSome string."G
+ CMsgTest_MessageToServer_Request#
+	some_text (	BÇµSome string."H
+!CMsgTest_MessageToServer_Response#
+	some_text (	BÇµSome string."I
+"CMsgTest_NotifyServer_Notification#
+	some_text (	BÇµSome string.2É
+TestSteamClientÅ
+MessageToClient!.CMsgTest_MessageToClient_Request".CMsgTest_MessageToClient_Response"'Çµ#Some description - MessageToClient.f
+NotifyClient#.CMsgTest_NotifyClient_Notification.NoResponse"$Çµ Some description - NotifyClient.¿µ2Ç
+TestServerFromClientÅ
+MessageToServer!.CMsgTest_MessageToServer_Request".CMsgTest_MessageToServer_Response"'Çµ#Some description - MessageToServer.f
+NotifyServer#.CMsgTest_NotifyServer_Notification.NoResponse"$Çµ Some description - NotifyServer.BÄ

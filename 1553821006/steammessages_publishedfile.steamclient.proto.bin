@@ -1,0 +1,412 @@
+
+-steammessages_publishedfile.steamclient.proto,steammessages_unified_base.steamclient.proto"t
+ CPublishedFile_Subscribe_Request
+publishedfileid (
+	list_type (
+appid (
+notify_client ("#
+!CPublishedFile_Subscribe_Response"v
+"CPublishedFile_Unsubscribe_Request
+publishedfileid (
+	list_type (
+appid (
+notify_client ("%
+#CPublishedFile_Unsubscribe_Response">
+#CPublishedFile_CanSubscribe_Request
+publishedfileid ("=
+$CPublishedFile_CanSubscribe_Response
+can_subscribe ("Ã
+
+CPublishedFile_Publish_Request<
+appid (B-Çµ)App Id this file is being published FROM.C
+consumer_appid (B+Çµ'App Id this file is being published TO.K
+cloudfilename (	B4Çµ0Name of the file to publish in the user's cloud.[
+preview_cloudfilename (	B<Çµ8Name of the file to use as the published file's preview.5
+title (	B&Çµ"Text title for the published file.F
+file_description (	B,Çµ(Text description for the published file.L
+	file_type (B9Çµ5(EWorkshopFileType) Type of Workshop file to publish.I
+consumer_shortcut_name (	B)Çµ%Shortcut name for the published file.I
+youtube_username	 (	B/Çµ+(Optional) User's YouTube account username.\
+youtube_videoid
+ (	BCÇµ?(Optional) Video Id of a YouTube video for this published file.Å
+
+visibility (BmÇµi(ERemoteStoragePublishedFileVisibility) Visibility of the published file (private, friends, public, etc.)k
+redirect_uri (	BUÇµQ(Optional) If supplied, the resulting published file's Id is appended to the URI.D
+tags (	B6Çµ2Array of text tags to apply to the published file.Y
+collection_type (	B@Çµ<(Optional) Type of collection the published file represents.M
+	game_type (	B:Çµ6(Optional) Type of game the published file represents.[
+url (	BNÇµJ(Optional) If this represents a game, this is the URL to that game's page."P
+CPublishedFile_Publish_Response
+publishedfileid (
+redirect_uri (	"≠
+!CPublishedFile_GetDetails_RequestP
+publishedfileids (B6Çµ2Set of published file Ids to retrieve details for.Q
+includetags (B<Çµ8If true, return tag information in the returned details.c
+includeadditionalpreviews (B@Çµ<If true, return preview information in the returned details.N
+includechildren (B5Çµ1If true, return children in the returned details.R
+includekvtags (B;Çµ7If true, return key value tags in the returned details.L
+includevotes (B6Çµ2If true, return vote data in the returned details.c
+short_description (BHÇµDIf true, return a short description instead of the full description.L
+includeforsaledata
+ (B0Çµ,If true, return pricing data, if applicable.B
+includemetadata (B)Çµ%If true, populate the metadata field.U
+language (:0B@Çµ<Specifies the localized text to return. Defaults to English.g
+return_playtime_stats (BHÇµDReturn playtime stats for the specified number of days before today.
+appid (F
+strip_description_bbcode (B$Çµ Strips BBCode from descriptions."Ï
+PublishedFileDetails
+result (
+publishedfileid (
+creator (
+creator_appid (
+consumer_appid (
+consumer_shortcutid (
+filename (	
+	file_size (
+preview_file_size	 (
+file_url
+ (	
+preview_url (	
+youtubevideoid (	
+url (	
+hcontent_file (
+hcontent_preview (
+title (	
+file_description (	
+short_description (	
+time_created (
+time_updated (
+
+visibility (
+flags (
+workshop_file (
+workshop_accepted (
+show_subscribe_all (
+num_comments_developer (
+num_comments_public (
+banned (
+
+ban_reason (	
+banner (
+can_be_deleted (
+incompatible  (
+app_name! (	
+	file_type" (
+can_subscribe# (
+subscriptions$ (
+	favorited% (
+	followers& (
+lifetime_subscriptions' (
+lifetime_favorited( (
+lifetime_followers) (
+lifetime_playtime> ("
+lifetime_playtime_sessions? (
+views* (
+image_width+ (
+image_height, (
+	image_url- (	
+spoiler_tag. (
+
+shortcutid/ (
+shortcutname0 (	
+num_children1 (
+num_reports2 (/
+previews3 (2.PublishedFileDetails.Preview'
+tags4 (2.PublishedFileDetails.Tag-
+children5 (2.PublishedFileDetails.Child+
+kvtags6 (2.PublishedFileDetails.KVTag1
+	vote_data7 (2.PublishedFileDetails.VoteData;
+playtime_stats@ (2#.PublishedFileDetails.PlaytimeStatsr
+time_subscribed8 (BYÇµUOnly valid in PublishedFile.GetUserFiles and not normal PublishedFile.GetDetail callsa
+for_sale_data9 (2!.PublishedFileDetails.ForSaleDataB'Çµ#Pricing information, if applicable.7
+metadata: (	B%Çµ!Metadata associated with the itemC
+language= (:0B.Çµ*The language of the title and description.
+maybe_inappropriate_sexA ($
+maybe_inappropriate_violenceB (%
+Tag
+tag (	
+	adminonly (¶
+Preview
+	previewid (
+	sortorder (
+url (	
+size (
+filename (	
+youtubevideoid (	
+preview_type (
+external_reference (	F
+Child
+publishedfileid (
+	sortorder (
+	file_type (#
+KVTag
+key (	
+value (	?
+VoteData
+score (
+votes_up (
+
+votes_down (»
+ForSaleData
+is_for_sale (
+price_category (-
+estatus (2.EPublishedFileForSaleStatus
+price_category_floor ("
+price_is_pay_what_you_want (
+discount_percentage (?
+PlaytimeStats
+playtime_seconds (
+num_sessions ("Y
+"CPublishedFile_GetDetails_Response3
+publishedfiledetails (2.PublishedFileDetails"⁄
+"CPublishedFile_GetItemInfo_Request
+app_id (
+last_time_updated (H
+workshop_items (20.CPublishedFile_GetItemInfo_Request.WorkshopItem?
+WorkshopItem
+published_file_id (
+time_updated ("Ú
+#CPublishedFile_GetItemInfo_Response
+update_time (M
+workshop_items (25.CPublishedFile_GetItemInfo_Response.WorkshopItemInfog
+WorkshopItemInfo
+published_file_id (
+time_updated (
+manifest_id (
+flags ("ß
+#CPublishedFile_GetUserFiles_RequestJ
+steamid (B9Çµ5Steam ID of the user whose files are being requested.F
+appid (B7Çµ3App Id of the app that the files were published to.:
+page (:1B)Çµ%(Optional) Starting page for results.P
+
+numperpage (:1B9Çµ5(Optional) The number of results, per page to return.C
+type (	:myfilesB,Çµ((Optional) Type of files to be returned.Y
+
+sortmethod (	:lastupdatedB8Çµ4(Optional) Sorting method to use on returned values.;
+privacy	 (B*Çµ&(optional) Filter by privacy settings.h
+requiredtags
+ (	BRÇµN(Optional) Tags that must be present on a published file to satisfy the query.l
+excludedtags (	BVÇµR(Optional) Tags that must NOT be present on a published file to satisfy the query.n
+required_kv_tags (2*.CPublishedFile_GetUserFiles_Request.KVTagB(Çµ$Required key-value tags to match on.=
+filetype (B+Çµ'(Optional) File type to match files to.a
+creator_appid (BJÇµFApp Id of the app that published the files, only matched if specified.I
+match_cloud_filename (	B+Çµ'Match this cloud filename if specified.j
+cache_max_age_seconds (:0BHÇµDAllow stale data to be returned for the specified number of seconds.U
+language (:0B@Çµ<Specifies the localized text to return. Defaults to English.i
+	totalonly (BVÇµR(Optional) If true, only return the total number of files that satisfy this query.n
+ids_only (B\ÇµX(Optional) If true, only return the published file ids of files that satisfy this query.4
+return_vote_data (:trueBÇµReturn vote data8
+return_tags (B#ÇµReturn tags in the file detailsK
+return_kv_tags (:trueB-Çµ)Return key-value tags in the file detailsW
+return_previews (B>Çµ:Return preview image and video details in the file detailsF
+return_children (B-Çµ)Return child item ids in the file detailsl
+return_short_description (:trueBDÇµ@Populate the short_description field instead of file_descriptionK
+return_for_sale_data (B-Çµ)Return pricing information, if applicable?
+return_metadata (:falseBÇµPopulate the metadata fieldg
+return_playtime_stats (BHÇµDReturn playtime stats for the specified number of days before today.F
+strip_description_bbcode  (B$Çµ Strips BBCode from descriptions.#
+KVTag
+key (	
+value (	"Ä
+$CPublishedFile_GetUserFiles_Response
+total (
+
+startindex (3
+publishedfiledetails (2.PublishedFileDetails7
+apps (2).CPublishedFile_GetUserFiles_Response.AppG
+App
+appid (
+name (	
+
+shortcutid (
+private ("ö
+1CPublishedFile_AreFilesInSubscriptionList_Request
+appid (
+publishedfileids (&
+listtype (BÇµSee EUCMListType<
+filetype (B*Çµ&See EPublishedFileInfoMatchingFileTypeV
+workshopfiletype (B<Çµ8See EWorkshopFileType.  If specified, overrides filetype"≤
+2CPublishedFile_AreFilesInSubscriptionList_ResponseI
+files (2:.CPublishedFile_AreFilesInSubscriptionList_Response.InList1
+InList
+publishedfileid (
+inlist ("ë
+CPublishedFile_Update_Request9
+appid (B*Çµ&App Id this published file belongs to.L
+publishedfileid (B3Çµ/Published file id of the file we'd like update.:
+title (	B+Çµ'(Optional) Title of the published file.K
+file_description (	B1Çµ-(Optional) Description of the published file.D
+
+visibility (B0Çµ,(Optional) Visibility of the published file.@
+tags (	B2Çµ.(Optional) Set of tags for the published file.A
+filename (	B/Çµ+(Optional) Filename for the published file.Q
+preview_filename (	B7Çµ3(Optional) Preview filename for the published file.^
+image_width (BIÇµE(Optional) If this is an image file, you can specify the image width.`
+image_height (BJÇµF(Optional) If this is an image file, you can specify the image height." 
+CPublishedFile_Update_Response"∏
+,CPublishedFile_GetChangeHistoryEntry_Requestc
+publishedfileid (BJÇµFPublished file id of the file we'd like to get the change history for.
+	timestamp (
+language ("]
+-CPublishedFile_GetChangeHistoryEntry_Response
+change_description (	
+language ("û
+'CPublishedFile_GetChangeHistory_Requestc
+publishedfileid (BJÇµFPublished file id of the file we'd like to get the change history for.@
+
+total_only (B,Çµ(Return the total number of changes only.
+
+startindex (
+count ()
+language (:0BÇµDesired language"Õ
+(CPublishedFile_GetChangeHistory_ResponseD
+changes (23.CPublishedFile_GetChangeHistory_Response.ChangeLog
+total (L
+	ChangeLog
+	timestamp (
+change_description (	
+language ("ª
+)CPublishedFile_RefreshVotingQueue_Request
+appid (B
+matching_file_type (B&Çµ"EPublishedFileInfoMatchingFileTypel
+tags (	B^ÇµZInclude files that have all the tags or any of the tags if match_all_tags is set to false.ï
+match_all_tags (:trueBwÇµsIf true, then files must have all the tags specified.  If false, then must have at least one of the tags specified.I
+excluded_tags (	B2Çµ.Exclude any files that have any of these tags.j
+desired_queue_size (BNÇµJDesired number of items in the voting queue.  May be clamped by the server",
+*CPublishedFile_RefreshVotingQueue_Response"ò
+!CPublishedFile_QueryFiles_RequestL
+
+query_type (B8Çµ4enumeration EPublishedFileQueryType in clientenums.h
+page (BÇµCurrent pageË
+cursor' (	B◊Çµ“Cursor to paginate through the results (set to '*' for the first request).  Prefer this over using the page parameter, as it will allow you to do deep pagination.  When used, the page parameter will be ignored.P
+
+numperpage (:1B9Çµ5(Optional) The number of results, per page to return.5
+creator_appid (BÇµApp that created the files.
+appid (BÇµApp that consumes the filesN
+requiredtags (	B8Çµ4Tags to match on. See match_all_tags parameter belowl
+excludedtags (	BVÇµR(Optional) Tags that must NOT be present on a published file to satisfy the query.ä
+match_all_tags (:trueBlÇµhIf true, then items must have all the tags specified, otherwise they must have at least one of the tags.Q
+required_flags	 (	B9Çµ5Required flags that must be set on any returned itemsK
+omitted_flags
+ (	B4Çµ0Flags that must not be set on any returned itemsI
+search_text (	B4Çµ0Text to match in the item's title or description8
+filetype (B&Çµ"EPublishedFileInfoMatchingFileTypeP
+child_publishedfileid (B1Çµ-Find all items that reference the given item.Ç
+days (BtÇµpIf query_type is k_PublishedFileQueryType_RankedByTrend, then this is the number of days to get votes for [1,7].∞
+include_recent_votes_only (BåÇµáIf query_type is k_PublishedFileQueryType_RankedByTrend, then limit result set just to items that have votes within the day range givenj
+cache_max_age_seconds (:0BHÇµDAllow stale data to be returned for the specified number of seconds.`
+language! (:0BKÇµGLanguage to search in and also what gets returned. Defaults to English.l
+required_kv_tags" (2(.CPublishedFile_QueryFiles_Request.KVTagB(Çµ$Required key-value tags to match on.i
+	totalonly (BVÇµR(Optional) If true, only return the total number of files that satisfy this query.n
+ids_only# (B\ÇµX(Optional) If true, only return the published file ids of files that satisfy this query..
+return_vote_data (BÇµReturn vote data8
+return_tags (B#ÇµReturn tags in the file detailsE
+return_kv_tags (B-Çµ)Return key-value tags in the file detailsW
+return_previews (B>Çµ:Return preview image and video details in the file detailsF
+return_children (B-Çµ)Return child item ids in the file detailsf
+return_short_description (BDÇµ@Populate the short_description field instead of file_descriptionK
+return_for_sale_data (B-Çµ)Return pricing information, if applicable9
+return_metadata  (:falseBÇµPopulate the metadatag
+return_playtime_stats$ (BHÇµDReturn playtime stats for the specified number of days before today.∑
+return_details% (BûÇµôBy default, if none of the other 'return_*' fields are set, only some voting details are returned. Set this to true to return the default set of details.F
+strip_description_bbcode& (B$Çµ Strips BBCode from descriptions.#
+KVTag
+key (	
+value (	"Ö
+"CPublishedFile_QueryFiles_ResponseT
+total (BEÇµANumber of matches found, not necessarily number of items returnedç
+publishedfiledetails (2.PublishedFileDetailsBXÇµTEach file details will be populated, depending on what return values were requested.y
+next_cursor (	BdÇµ`If a paging cursor was used, then this will be the next cursor to use for paging through results"i
+)CPublishedFile_AddAppRelationship_Request
+publishedfileid (
+appid (
+relationship (",
+*CPublishedFile_AddAppRelationship_Response"l
+,CPublishedFile_RemoveAppRelationship_Request
+publishedfileid (
+appid (
+relationship ("/
+-CPublishedFile_RemoveAppRelationship_Response"E
+*CPublishedFile_GetAppRelationships_Request
+publishedfileid ("æ
++CPublishedFile_GetAppRelationships_ResponseW
+app_relationships (2<.CPublishedFile_GetAppRelationships_Response.AppRelationship6
+AppRelationship
+appid (
+relationship ("W
+,CPublishedFile_StartPlaytimeTracking_Request
+appid (
+publishedfileids ("/
+-CPublishedFile_StartPlaytimeTracking_Response"V
++CPublishedFile_StopPlaytimeTracking_Request
+appid (
+publishedfileids (".
+,CPublishedFile_StopPlaytimeTracking_Response"J
+9CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
+appid ("<
+:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"Å
+6CPublishedFile_SetPlaytimeForControllerConfigs_Request
+appid (n
+controller_config_usage (2M.CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsageH
+ControllerConfigUsage
+publishedfileid (
+seconds_active ("9
+7CPublishedFile_SetPlaytimeForControllerConfigs_Response"Y
+CPublishedFile_AddChild_Request
+publishedfileid (
+child_publishedfileid (""
+ CPublishedFile_AddChild_Response"\
+"CPublishedFile_RemoveChild_Request
+publishedfileid (
+child_publishedfileid ("%
+#CPublishedFile_RemoveChild_Response"Ì
+*CPublishedFile_FileSubscribed_Notification@
+published_file_id (B%Çµ!PublishedFileID_t for the content
+app_id (:
+file_hcontent (B#ÇµUGC file handle or manifest GID
+	file_size (
+rtime_subscribed (N
+is_depot_content (B4Çµ0True if workshop item is delivered via Steampipe4
+rtime_updated (BÇµLast time content updated"Ä
+,CPublishedFile_FileUnsubscribed_Notification@
+published_file_id (B%Çµ!PublishedFileID_t for the content
+app_id ("Ç
+.CPublishedFile_FileDeleted_Client_Notification@
+published_file_id (B%Çµ!PublishedFileID_t for the content
+app_id (*»
+EPublishedFileForSaleStatus
+k_PFFSS_NotForSale 
+k_PFFSS_PendingApproval
+k_PFFSS_ApprovedForSale
+k_PFFSS_RejectedForSale
+k_PFFSS_NoLongerForSale
+k_PFFSS_TentativeApproval2Ã
+PublishedFileÅ
+	Subscribe!.CPublishedFile_Subscribe_Request".CPublishedFile_Subscribe_Response"-Çµ)Subscribes the user to the published fileã
+Unsubscribe#.CPublishedFile_Unsubscribe_Request$.CPublishedFile_Unsubscribe_Response"1Çµ-Unsubscribes the user from the published fileñ
+CanSubscribe$.CPublishedFile_CanSubscribe_Request%.CPublishedFile_CanSubscribe_Response"9Çµ5Check if the user can subscribe to the published fileÄ
+Publish.CPublishedFile_Publish_Request .CPublishedFile_Publish_Response"2Çµ.Publishes a clouded user file to the Workshop.ê
+
+GetDetails".CPublishedFile_GetDetails_Request#.CPublishedFile_GetDetails_Response"9Çµ5Retrieves information about a set of published files.ì
+GetItemInfo#.CPublishedFile_GetItemInfo_Request$.CPublishedFile_GetItemInfo_Response"9Çµ5Retrieves information about a set of published files.Ö
+GetUserFiles$.CPublishedFile_GetUserFiles_Request%.CPublishedFile_GetUserFiles_Response"(Çµ$Retrieves files published by a user.’
+AreFilesInSubscriptionList2.CPublishedFile_AreFilesInSubscriptionList_Request3.CPublishedFile_AreFilesInSubscriptionList_Response"NÇµJDetermines which files in the given list are in a user's subscription listz
+Update.CPublishedFile_Update_Request.CPublishedFile_Update_Response"/Çµ+Updates information about a published file.¿
+GetChangeHistoryEntry-.CPublishedFile_GetChangeHistoryEntry_Request..CPublishedFile_GetChangeHistoryEntry_Response"HÇµDReturns data on a specific change history entry for a published file§
+GetChangeHistory(.CPublishedFile_GetChangeHistory_Request).CPublishedFile_GetChangeHistory_Response";Çµ7Returns data on the change history for a published fileò
+RefreshVotingQueue*.CPublishedFile_RefreshVotingQueue_Request+.CPublishedFile_RefreshVotingQueue_Response")Çµ%Refresh the voting queue for the userÜ
+
+QueryFiles".CPublishedFile_QueryFiles_Request#.CPublishedFile_QueryFiles_Response"/Çµ+Performs a search query for published files≥
+AddAppRelationship*.CPublishedFile_AddAppRelationship_Request+.CPublishedFile_AddAppRelationship_Response"DÇµ@Adds a relationship between the published file and the given appæ
+RemoveAppRelationship-.CPublishedFile_RemoveAppRelationship_Request..CPublishedFile_RemoveAppRelationship_Response"FÇµBRemove a relationship between the published file and the given app≥
+GetAppRelationships+.CPublishedFile_GetAppRelationships_Request,.CPublishedFile_GetAppRelationships_Response"AÇµ=Returns the list of app relationships for this published file≥
+StartPlaytimeTracking-.CPublishedFile_StartPlaytimeTracking_Request..CPublishedFile_StartPlaytimeTracking_Response";Çµ7Start usage tracking for a given set of published files∞
+StopPlaytimeTracking,.CPublishedFile_StopPlaytimeTracking_Request-.CPublishedFile_StopPlaytimeTracking_Response";Çµ7Stops usage tracking for a given set of published filesÌ
+"StopPlaytimeTrackingForAllAppItems:.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request;.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"NÇµJStops usage tracking for all items currently tracked for the specified appò
+SetPlaytimeForControllerConfigs7.CPublishedFile_SetPlaytimeForControllerConfigs_Request8.CPublishedFile_SetPlaytimeForControllerConfigs_Response"ÅÇµ}Stops usage tracking all controller configs for the given app and set the usage time for the for the given controller configsè
+AddChild .CPublishedFile_AddChild_Request!.CPublishedFile_AddChild_Response">Çµ:Adds a parent->child relationship between the given items.ô
+RemoveChild#.CPublishedFile_RemoveChild_Request$.CPublishedFile_RemoveChild_Response"?Çµ;Removes parent->child relationship between the given items.+Çµ'A service to access published file data2ç
+PublishedFileClientì
+NotifyFileSubscribed+.CPublishedFile_FileSubscribed_Notification.NoResponse"AÇµ=Notification from the server when a user subscribes to a fileõ
+NotifyFileUnsubscribed-.CPublishedFile_FileUnsubscribed_Notification.NoResponse"EÇµANotification from the server when a user unsubscribes from a fileî
+NotifyFileDeleted/.CPublishedFile_FileDeleted_Client_Notification.NoResponse"AÇµ=Notification from the server when a published file is deleted+Çµ#Published file client notifications¿µBÄ
