@@ -1,74 +1,0 @@
-
-$steammessages_econ.steamclient.proto,steammessages_unified_base.steamclient.proto"D
-&CEcon_GetTradeOfferAccessToken_Request
-generate_new_token ("K
-'CEcon_GetTradeOfferAccessToken_Response 
-trade_offer_access_token (	"C
--CEcon_ClientGetItemShopOverlayAuthURL_Request
-
-return_url (	"=
-.CEcon_ClientGetItemShopOverlayAuthURL_Response
-url (	"©
-CEcon_GetAssetClassInfo_Request
-language (	
-appid (7
-classes (2&.CEcon_GetAssetClassInfo_Request.Class,
-Class
-classid (
-
-instanceid ("V
-CEconItem_DescriptionLine
-type (	
-value (	
-color (	
-label (	".
-CEconItem_Action
-link (	
-name (	"’
-CEconItem_Description
-appid (
-classid (
-
-instanceid (
-currency (
-background_color (	
-icon_url (	
-icon_url_large (	0
-descriptions (2.CEconItem_DescriptionLine
-tradable	 ("
-actions
- (2.CEconItem_Action6
-owner_descriptions (2.CEconItem_DescriptionLine(
-owner_actions (2.CEconItem_Action
-fraudwarnings (	
-name (	
-
-name_color (	
-type (	
-market_name (	
-market_hash_name (	
-
-market_fee (	
-market_fee_app (.
-contained_item (2.CEconItem_Description)
-market_actions (2.CEconItem_Action
-	commodity (#
-market_tradable_restriction (%
-market_marketable_restriction (
-
-marketable (
-tags (2.CEconItem_Tag
-item_expiration (	"˜
-CEconItem_Tag1
-appid (B"‚µThe app that contains the itemJ
-category (	B8‚µ4The internal name of the category the tag belongs to7
-internal_name (	B ‚µThe internal name of the tagG
-localized_category_name (	B&‚µ"The localized name of the category=
-localized_tag_name (	B!‚µThe localized name of the tagG
-color (	B8‚µ4The color to use when displaying the tag to the user"P
- CEcon_GetAssetClassInfo_Response,
-descriptions (2.CEconItem_Description2â
-Econš
-GetTradeOfferAccessToken'.CEcon_GetTradeOfferAccessToken_Request(.CEcon_GetTradeOfferAccessToken_Response"+‚µ'Get the user's trade offer access tokenÙ
-ClientGetItemShopOverlayAuthURL..CEcon_ClientGetItemShopOverlayAuthURL_Request/.CEcon_ClientGetItemShopOverlayAuthURL_Response"U‚µQGenerates a URL which sets a secure cookie for in-game-browser itemshop purchasesŸ
-GetAssetClassInfo .CEcon_GetAssetClassInfo_Request!.CEcon_GetAssetClassInfo_Response"E‚µAReturns description information about the passed in asset classes?‚µ;A service that provides communication with the econ serversB€

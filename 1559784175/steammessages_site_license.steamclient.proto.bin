@@ -1,0 +1,71 @@
+
+,steammessages_site_license.steamclient.proto,steammessages_unified_base.steamclient.proto"ç
+)CSiteManagerClient_IncomingClient_Request
+site_instanceid (
+client_steamid (
+client_local_ip (
+connection_key (",
+*CSiteManagerClient_IncomingClient_Response"N
+,CSiteLicense_ClientSeatCheckout_Notification
+appid (
+eresult ("„
+/CSiteManagerClient_TrackedPayments_Notification
+site_id (J
+payments (28.CSiteManagerClient_TrackedPayments_Notification.Payment“
+Payment
+transid (
+steamid (
+amount (
+	ecurrency (
+time_created (
+purchase_status (
+machine_name (	
+persona_name (	
+profile_url	 (	
+
+avatar_url
+ (	"r
+(CSiteLicense_InitiateAssociation_Request
+site_steamid (
+site_instanceid (
+client_local_ip ("C
+)CSiteLicense_InitiateAssociation_Response
+connection_key (":
+$CSiteLicense_LCSAuthenticate_Request
+
+instanceid ("z
+%CSiteLicense_LCSAuthenticate_Response
+site_id (
+	site_name (	
+new_session (
+no_site_licenses ("t
+%CSiteLicense_LCSAssociateUser_Request
+steamid (
+local_ip (
+
+instanceid (
+machine_name (	"(
+&CSiteLicense_LCSAssociateUser_Response"]
+'CSiteLicense_ClientSeatCheckout_Request
+steamid (
+
+instanceid (
+appid ("*
+(CSiteLicense_ClientSeatCheckout_Response"b
+,CSiteLicense_ClientGetAvailableSeats_Request
+steamid (
+
+instanceid (
+appid ("H
+-CSiteLicense_ClientGetAvailableSeats_Response
+available_seats (2£
+SiteManagerClientØ
+IncomingClient*.CSiteManagerClient_IncomingClient_Request+.CSiteManagerClient_IncomingClient_Response"DÇµ@Rack informing site manager of new inbound client PSK connectionì
+ClientSeatCheckoutNotification-.CSiteLicense_ClientSeatCheckout_Notification.NoResponse"5Çµ1Notify client directly about seat checkout resultö
+TrackedPaymentsNotification0.CSiteManagerClient_TrackedPayments_Notification.NoResponse"<Çµ8Rack informing site manager of existing tracked payments)Çµ!Local site manager client service¿µ2’
+SiteLicense§
+InitiateAssociation).CSiteLicense_InitiateAssociation_Request*.CSiteLicense_InitiateAssociation_Response"6Çµ2Client is requesting connetion info for local siteÜ
+LCSAuthenticate%.CSiteLicense_LCSAuthenticate_Request&.CSiteLicense_LCSAuthenticate_Response"$Çµ Local cafe server authenticationù
+LCSAssociateUser&.CSiteLicense_LCSAssociateUser_Request'.CSiteLicense_LCSAssociateUser_Response"8Çµ4Local cafe server wants to grant user access to siteû
+ClientSeatCheckout(.CSiteLicense_ClientSeatCheckout_Request).CSiteLicense_ClientSeatCheckout_Response"3Çµ/Client is requesting use of a site license seat∫
+ClientGetAvailableSeats-.CSiteLicense_ClientGetAvailableSeats_Request..CSiteLicense_ClientGetAvailableSeats_Response"@Çµ<Client is requesting the number of currently available seatsÇµSite License serviceBÄ

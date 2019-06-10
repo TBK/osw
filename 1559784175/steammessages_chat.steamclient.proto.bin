@@ -1,0 +1,644 @@
+
+$steammessages_chat.steamclient.proto,steammessages_unified_base.steamclient.proto"*
+(CChat_RequestFriendPersonaStates_Request"+
+)CChat_RequestFriendPersonaStates_Response"Œ
+%CChatRoom_CreateChatRoomGroup_Request
+steamid_partner (
+steamid_invited (
+name (	
+steamid_invitees ($
+watching_broadcast_accountid (%
+watching_broadcast_channel_id (";
+	CChatRole
+role_id (
+name (	
+ordinal ("‘
+CChatRoleActions
+role_id ((
+ can_create_rename_delete_channel (
+can_kick (
+can_ban (
+
+can_invite (&
+can_change_tagline_avatar_name (
+can_chat (
+can_view_history (
+can_change_group_roles	 (
+can_change_user_roles
+ (
+can_mention_all ("
+can_set_watching_broadcast ("c
+CChatPartyBeacon
+app_id (
+steamid_owner (
+	beacon_id (
+game_metadata (	"ˆ
+CChatRoomGroupHeaderState
+chat_group_id (
+	chat_name (	
+clanid (
+accountid_owner (
+appid (
+tagline (	
+
+avatar_sha (
+default_role_id (
+roles (2
+.CChatRole'
+role_actions (2.CChatRoleActions$
+watching_broadcast_accountid ((
+party_beacons (2.CChatPartyBeacon%
+watching_broadcast_channel_id ("ó
+CChatRoomMember
+	accountid ("
+state (2.EChatRoomJoinState!
+rank (2.EChatRoomGroupRank
+time_kick_expire (
+role_ids (" 
+CChatRoomState
+chat_id (
+	chat_name (	
+voice_allowed (
+members_in_voice (
+time_last_message (
+
+sort_order (
+last_message (	
+accountid_last_message (" 
+CChatRoomGroupState0
+header_state (2.CChatRoomGroupHeaderState!
+members (2.CChatRoomMember
+default_chat_id (#
+
+chat_rooms (2.CChatRoomState 
+kicked (2.CChatRoomMember"˚
+CUserChatRoomState
+chat_id (
+time_joined (
+time_last_ack (e
+desktop_notification_level (2.EChatRoomNotificationLevel:$k_EChatroomNotificationLevel_Invalidd
+mobile_notification_level (2.EChatRoomNotificationLevel:$k_EChatroomNotificationLevel_Invalid
+time_last_mention (%
+unread_indicator_muted (:false
+time_first_unread ("â
+CUserChatRoomGroupState
+chat_group_id (
+time_joined (1
+user_chat_room_state (2.CUserChatRoomStatee
+desktop_notification_level (2.EChatRoomNotificationLevel:$k_EChatroomNotificationLevel_Invalidd
+mobile_notification_level (2.EChatRoomNotificationLevel:$k_EChatroomNotificationLevel_Invalid
+time_last_group_ack (%
+unread_indicator_muted (:false"ó
+&CChatRoom_CreateChatRoomGroup_Response
+chat_group_id (#
+state (2.CChatRoomGroupState1
+user_chat_state (2.CUserChatRoomGroupState"J
+#CChatRoom_SaveChatRoomGroup_Request
+chat_group_id (
+name (	"&
+$CChatRoom_SaveChatRoomGroup_Response"L
+%CChatRoom_RenameChatRoomGroup_Request
+chat_group_id (
+name (	"6
+&CChatRoom_RenameChatRoomGroup_Response
+name (	"S
+)CChatRoom_SetChatRoomGroupTagline_Request
+chat_group_id (
+tagline (	",
+*CChatRoom_SetChatRoomGroupTagline_Response"U
+(CChatRoom_SetChatRoomGroupAvatar_Request
+chat_group_id (
+
+avatar_sha ("+
+)CChatRoom_SetChatRoomGroupAvatar_Response"ô
+3CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
+chat_group_id ($
+watching_broadcast_accountid (%
+watching_broadcast_channel_id ("6
+4CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"X
+CChatRoom_MuteUser_Request
+chat_group_id (
+steamid (
+
+expiration ("
+CChatRoom_MuteUser_Response"X
+CChatRoom_KickUser_Request
+chat_group_id (
+steamid (
+
+expiration ("
+CChatRoom_KickUser_Response"^
+!CChatRoom_SetUserBanState_Request
+chat_group_id (
+steamid (
+	ban_state ("$
+"CChatRoom_SetUserBanState_Response"H
+CChatRoom_RevokeInvite_Request
+chat_group_id (
+steamid ("!
+CChatRoom_RevokeInvite_Response"C
+CChatRoom_CreateRole_Request
+chat_group_id (
+name (	"C
+CChatRoom_CreateRole_Response"
+actions (2.CChatRoleActions"3
+CChatRoom_GetRoles_Request
+chat_group_id ("8
+CChatRoom_GetRoles_Response
+roles (2
+.CChatRole"T
+CChatRoom_RenameRole_Request
+chat_group_id (
+role_id (
+name (	"
+CChatRoom_RenameRole_Response"X
+CChatRoom_ReorderRole_Request
+chat_group_id (
+role_id (
+ordinal (" 
+CChatRoom_ReorderRole_Response"F
+CChatRoom_DeleteRole_Request
+chat_group_id (
+role_id ("
+CChatRoom_DeleteRole_Response"J
+ CChatRoom_GetRoleActions_Request
+chat_group_id (
+role_id ("G
+!CChatRoom_GetRoleActions_Response"
+actions (2.CChatRoleActions"r
+$CChatRoom_ReplaceRoleActions_Request
+chat_group_id (
+role_id ("
+actions (2.CChatRoleActions"'
+%CChatRoom_ReplaceRoleActions_Response"Z
+CChatRoom_AddRoleToUser_Request
+chat_group_id (
+role_id (
+steamid (""
+ CChatRoom_AddRoleToUser_Response"K
+!CChatRoom_GetRolesForUser_Request
+chat_group_id (
+steamid ("6
+"CChatRoom_GetRolesForUser_Response
+role_ids ("_
+$CChatRoom_DeleteRoleFromUser_Request
+chat_group_id (
+role_id (
+steamid ("'
+%CChatRoom_DeleteRoleFromUser_Response"b
+#CChatRoom_JoinChatRoomGroup_Request
+chat_group_id (
+invite_code (	
+chat_id ("©
+$CChatRoom_JoinChatRoomGroup_Response#
+state (2.CChatRoomGroupState1
+user_chat_state (2.CUserChatRoomGroupState
+join_chat_id (
+time_expire ("Ü
+-CChatRoom_InviteFriendToChatRoomGroup_Request
+chat_group_id (
+steamid (
+chat_id (
+skip_friendsui_check ("0
+.CChatRoom_InviteFriendToChatRoomGroup_Response"=
+$CChatRoom_LeaveChatRoomGroup_Request
+chat_group_id ("'
+%CChatRoom_LeaveChatRoomGroup_Response"\
+ CChatRoom_CreateChatRoom_Request
+chat_group_id (
+name (	
+allow_voice ("G
+!CChatRoom_CreateChatRoom_Response"
+	chat_room (2.CChatRoomState"J
+ CChatRoom_DeleteChatRoom_Request
+chat_group_id (
+chat_id ("#
+!CChatRoom_DeleteChatRoom_Response"X
+ CChatRoom_RenameChatRoom_Request
+chat_group_id (
+chat_id (
+name (	"#
+!CChatRoom_RenameChatRoom_Response"g
+!CChatRoom_ReorderChatRoom_Request
+chat_group_id (
+chat_id (
+move_after_chat_id ("$
+"CChatRoom_ReorderChatRoom_Response"\
+!CChatRoom_SendChatMessage_Request
+chat_group_id (
+chat_id (
+message (	"i
+"CChatRoom_SendChatMessage_Response
+modified_message (	
+server_timestamp (
+ordinal ("I
+CChatRoom_JoinVoiceChat_Request
+chat_group_id (
+chat_id ("8
+ CChatRoom_JoinVoiceChat_Response
+voice_chatid ("J
+ CChatRoom_LeaveVoiceChat_Request
+chat_group_id (
+chat_id ("#
+!CChatRoom_LeaveVoiceChat_Response"¥
+#CChatRoom_GetMessageHistory_Request
+chat_group_id (
+chat_id (
+	last_time (
+last_ordinal (
+
+start_time (
+start_ordinal (
+	max_count ("h
+ServerMessage(
+message (2.EChatRoomServerMessage
+string_param (	
+accountid_param ("ò
+$CChatRoom_GetMessageHistory_ResponseC
+messages (21.CChatRoom_GetMessageHistory_Response.ChatMessage
+more_available (í
+ChatMessage
+sender (
+server_timestamp (
+message (	
+ordinal (&
+server_message (2.ServerMessage
+deleted ("'
+%CChatRoom_GetMyChatRoomGroups_Request"–
+*CChatRoom_GetChatRoomGroupSummary_Response
+chat_group_id (
+chat_group_name (	
+active_member_count (!
+active_voice_member_count (
+default_chat_id (#
+
+chat_rooms (2.CChatRoomState
+clanid (
+chat_group_tagline (	
+accountid_owner	 (
+top_members
+ (
+chat_group_avatar_sha (!
+rank (2.EChatRoomGroupRank
+default_role_id (
+role_ids ('
+role_actions (2.CChatRoleActions$
+watching_broadcast_accountid (
+appid ((
+party_beacons (2.CChatPartyBeacon%
+watching_broadcast_channel_id ("ì
+CChatRoomSummaryPair7
+user_chat_group_state (2.CUserChatRoomGroupStateB
+group_summary (2+.CChatRoom_GetChatRoomGroupSummary_Response"Y
+&CChatRoom_GetMyChatRoomGroups_Response/
+chat_room_groups (2.CChatRoomSummaryPair"@
+'CChatRoom_GetChatRoomGroupState_Request
+chat_group_id ("O
+(CChatRoom_GetChatRoomGroupState_Response#
+state (2.CChatRoomGroupState"B
+)CChatRoom_GetChatRoomGroupSummary_Request
+chat_group_id ("b
+%CChatRoom_AckChatMessage_Notification
+chat_group_id (
+chat_id (
+	timestamp ("c
+"CChatRoom_CreateInviteLink_Request
+chat_group_id (
+seconds_valid (
+chat_id ("Q
+#CChatRoom_CreateInviteLink_Response
+invite_code (	
+seconds_valid (":
+#CChatRoom_GetInviteLinkInfo_Request
+invite_code (	"å
+$CChatRoom_GetInviteLinkInfo_Response
+steamid_sender (
+time_expires (
+chat_id (B
+group_summary (2+.CChatRoom_GetChatRoomGroupSummary_Response7
+user_chat_group_state	 (2.CUserChatRoomGroupState
+time_kick_expire
+ (
+banned ("w
+CChatRoom_GetInviteInfo_Request
+steamid_invitee (
+chat_group_id (
+chat_id (
+invite_code (	"ê
+ CChatRoom_GetInviteInfo_ResponseB
+group_summary (2+.CChatRoom_GetChatRoomGroupSummary_Response
+time_kick_expire (
+banned ("A
+(CChatRoom_GetInviteLinksForGroup_Request
+chat_group_id ("◊
+)CChatRoom_GetInviteLinksForGroup_ResponseI
+invite_links (23.CChatRoom_GetInviteLinksForGroup_Response.LinkInfo_
+LinkInfo
+invite_code (	
+steamid_creator (
+time_expires (
+chat_id ("5
+CChatRoom_GetBanList_Request
+chat_group_id ("µ
+CChatRoom_GetBanList_Response4
+bans (2&.CChatRoom_GetBanList_Response.BanInfo^
+BanInfo
+	accountid (
+accountid_actor (
+time_banned (
+
+ban_reason (	"8
+CChatRoom_GetInviteList_Request
+chat_group_id ("X
+CChatRoomGroupInvite
+	accountid (
+accountid_actor (
+time_invited ("J
+ CChatRoom_GetInviteList_Response&
+invites (2.CChatRoomGroupInvite"P
+"CChatRoom_DeleteInviteLink_Request
+chat_group_id (
+invite_code (	"%
+#CChatRoom_DeleteInviteLink_Response"n
+0CChatRoom_SetSessionActiveChatRoomGroups_Request
+chat_group_ids ("
+chat_groups_data_requested ("^
+1CChatRoom_SetSessionActiveChatRoomGroups_Response)
+chat_states (2.CChatRoomGroupState"í
+-CChatRoom_SetUserChatGroupPreferences_Request
+chat_group_id (c
+chat_group_preferences (2C.CChatRoom_SetUserChatGroupPreferences_Request.ChatGroupPreferencesa
+chat_room_preferences (2B.CChatRoom_SetUserChatGroupPreferences_Request.ChatRoomPreferences∑
+ChatGroupPreferences?
+desktop_notification_level (2.EChatRoomNotificationLevel>
+mobile_notification_level (2.EChatRoomNotificationLevel
+unread_indicator_muted («
+ChatRoomPreferences
+chat_id (?
+desktop_notification_level (2.EChatRoomNotificationLevel>
+mobile_notification_level (2.EChatRoomNotificationLevel
+unread_indicator_muted ("0
+.CChatRoom_SetUserChatGroupPreferences_Response"≈
+$CChatRoom_DeleteChatMessages_Request
+chat_group_id (
+chat_id (?
+messages (2-.CChatRoom_DeleteChatMessages_Request.Message4
+Message
+server_timestamp (
+ordinal ("'
+%CChatRoom_DeleteChatMessages_Response"ò
+*CClanChatRooms_GetClanChatRoomInfo_Request
+steamid (Y
+
+autocreate (:trueB?Çµ;Create a default chat room if none has been created before."v
++CClanChatRooms_GetClanChatRoomInfo_ResponseG
+chat_group_summary (2+.CChatRoom_GetChatRoomGroupSummary_Response"[
+-CClanChatRooms_SetClanChatRoomPrivate_Request
+steamid (
+chat_room_private ("K
+.CClanChatRooms_SetClanChatRoomPrivate_Response
+chat_room_private ("V
+CChatMentions
+mention_all (
+mention_here (
+mention_accountids ("’
+*CChatRoom_IncomingChatMessage_Notification
+chat_group_id (
+chat_id (
+steamid_sender (
+message (	
+	timestamp ( 
+mentions (2.CChatMentions
+ordinal (&
+server_message (2.ServerMessage
+message_no_bbcode	 (	M
+	chat_name
+ (	B:Çµ6A name to use for the chat, intended for notifications"Í
+*CChatRoom_ChatMessageModified_Notification
+chat_group_id (
+chat_id (I
+messages (27.CChatRoom_ChatMessageModified_Notification.ChatMessageI
+ChatMessage
+server_timestamp (
+ordinal (
+deleted ("ê
+(CChatRoom_MemberStateChange_Notification
+chat_group_id ( 
+member (2.CChatRoomMember+
+change (2.EChatRoomMemberStateChange"^
+*CChatRoom_ChatRoomHeaderState_Notification0
+header_state (2.CChatRoomGroupHeaderState"Ü
+/CChatRoom_ChatRoomGroupRoomsChange_Notification
+chat_group_id (
+default_chat_id (#
+
+chat_rooms (2.CChatRoomState"d
+:CChatRoom_NotifyShouldRejoinChatRoomVoiceChat_Notification
+chat_id (
+chat_group_id ("É
+;ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
+chat_group_id (7
+user_chat_group_state (2.CUserChatRoomGroupStateB
+group_summary (2+.CChatRoom_GetChatRoomGroupSummary_Response0
+user_action (2.EChatRoomMemberStateChange"≈
+2CChatUsability_ClientUsabilityMetrics_Notification
+metrics_run_id (
+client_build (
+metrics_version (
+in_web (N
+settings
+ (2<.CChatUsability_ClientUsabilityMetrics_Notification.SettingsY
+voice_settings (2A.CChatUsability_ClientUsabilityMetrics_Notification.VoiceSettingsM
+ui_state (2;.CChatUsability_ClientUsabilityMetrics_Notification.UIStateL
+metrics (2;.CChatUsability_ClientUsabilityMetrics_Notification.Metricsø
+Settings!
+notifications_show_ingame (!
+notifications_show_online ("
+notifications_show_message (.
+&notifications_events_and_announcements (
+sounds_play_ingame (
+sounds_play_online (
+sounds_play_message ('
+sounds_events_and_announcements (
+always_new_chat_window	 ('
+force_alphabetic_friend_sorting
+ (
+chat_flash_mode (
+remember_open_chats (
+compact_quick_access (
+compact_friends_list (1
+)notifications_show_chat_room_notification (*
+"sounds_play_chat_room_notification (*
+"hide_offline_friends_in_tag_groups ( 
+hide_categorized_friends (*
+"categorize_in_game_friends_by_game (
+chat_font_size (
+use24hour_clock (
+do_not_disturb_mode (
+disable_embed_inlining (
+sign_into_friends (Í
+VoiceSettings
+voice_input_gain (
+voice_output_gain (
+noise_gate_level (#
+voice_use_echo_cancellation ($
+voice_use_noise_cancellation (#
+voice_use_auto_gain_control ( 
+selected_non_default_mic (#
+selected_non_default_output (
+push_to_talk_enabled	 (
+push_to_mute_enabled
+ (
+play_ptt_sounds (˝
+UIState
+friends_list_height (
+friends_list_width (
+friends_list_docked (
+friends_list_collapsed ('
+friends_list_group_chats_height (
+friends_list_visible (
+chat_popups_opened (
+group_chat_tabs_opened (
+friend_chat_tabs_opened	 (
+chat_window_width
+ (
+chat_window_height (l
+category_collapse (2Q.CChatUsability_ClientUsabilityMetrics_Notification.UIState.CategoryCollapseState%
+group_chat_left_col_collapsed (&
+group_chat_right_col_collapsed ( 
+in_one_on_one_voice_chat (
+in_group_voice_chat (§
+CategoryCollapseState
+in_game_collapsed (
+online_collapsed (
+offline_collapsed (
+game_groups_collapsed (
+categories_collapsed (¿
+Metrics
+friends_count (
+friends_category_count (!
+friends_categorized_count (
+friends_online_count (
+friends_in_game_count ('
+friends_in_game_singleton_count (
+game_group_count (
+friends_favorite_count (
+group_chat_count	 (!
+group_chat_favorite_count
+ ("S
+9CChatUsability_RequestClientUsabilityMetrics_Notification
+metrics_run_id (*ú
+EChatRoomJoinState 
+k_EChatRoomJoinState_Default 
+k_EChatRoomJoinState_None
+k_EChatRoomJoinState_Joined$
+ k_EChatRoomJoinState_TestInvalidc*§
+EChatRoomGroupRank 
+k_EChatRoomGroupRank_Default 
+k_EChatRoomGroupRank_Viewer
+
+k_EChatRoomGroupRank_Guest
+k_EChatRoomGroupRank_Member"
+k_EChatRoomGroupRank_Moderator 
+k_EChatRoomGroupRank_Officer(
+k_EChatRoomGroupRank_Owner2$
+ k_EChatRoomGroupRank_TestInvalidc*Ù
+EChatRoomNotificationLevel(
+$k_EChatroomNotificationLevel_Invalid %
+!k_EChatroomNotificationLevel_None*
+&k_EChatroomNotificationLevel_MentionMe+
+'k_EChatroomNotificationLevel_MentionAll,
+(k_EChatroomNotificationLevel_AllMessages*ó
+EChatRoomServerMessage 
+k_EChatRoomServerMsg_Invalid '
+#k_EChatRoomServerMsg_RenameChatRoom
+k_EChatRoomServerMsg_Joined
+k_EChatRoomServerMsg_Parted
+k_EChatRoomServerMsg_Kicked 
+k_EChatRoomServerMsg_Invited(
+$k_EChatRoomServerMsg_InviteDismissed/
++k_EChatRoomServerMsg_ChatRoomTaglineChanged	.
+*k_EChatRoomServerMsg_ChatRoomAvatarChanged
+"
+k_EChatRoomServerMsg_AppCustom*À
+EChatRoomMemberStateChange(
+$k_EChatRoomMemberStateChange_Invalid '
+#k_EChatRoomMemberStateChange_Joined'
+#k_EChatRoomMemberStateChange_Parted'
+#k_EChatRoomMemberStateChange_Kicked(
+$k_EChatRoomMemberStateChange_Invited,
+(k_EChatRoomMemberStateChange_RankChanged0
+,k_EChatRoomMemberStateChange_InviteDismissed&
+"k_EChatRoomMemberStateChange_Muted	'
+#k_EChatRoomMemberStateChange_Banned
+-
+)k_EChatRoomMemberStateChange_RolesChanged2ã
+ChatÁ
+RequestFriendPersonaStates).CChat_RequestFriendPersonaStates_Request*.CChat_RequestFriendPersonaStates_Response"rÇµnRequest to be notified of online friend persona state information.  Responses sent via CMsgClientPersonaState.ÇµChat-related services2ˇ2
+ChatRoom£
+CreateChatRoomGroup&.CChatRoom_CreateChatRoomGroup_Request'.CChatRoom_CreateChatRoomGroup_Response";Çµ7Create's a chat group that can contain other chat roomsz
+SaveChatRoomGroup$.CChatRoom_SaveChatRoomGroup_Request%.CChatRoom_SaveChatRoomGroup_Response"ÇµSaves's a chat groupÑ
+RenameChatRoomGroup&.CChatRoom_RenameChatRoomGroup_Request'.CChatRoom_RenameChatRoomGroup_Response"ÇµRename a chat room groupô
+SetChatRoomGroupTagline*.CChatRoom_SetChatRoomGroupTagline_Request+.CChatRoom_SetChatRoomGroupTagline_Response"%Çµ!Set tagline for a chat room groupô
+SetChatRoomGroupAvatar).CChatRoom_SetChatRoomGroupAvatar_Request*.CChatRoom_SetChatRoomGroupAvatar_Response"(Çµ$Set avatar SHA for a chat room groupÀ
+!SetChatRoomGroupWatchingBroadcast4.CChatRoom_SetChatRoomGroupWatchingBroadcast_Request5.CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"9Çµ5Sets a broadcast that the chat room group is watchingd
+MuteUserInGroup.CChatRoom_MuteUser_Request.CChatRoom_MuteUser_Response"ÇµMute user in grouph
+KickUserFromGroup.CChatRoom_KickUser_Request.CChatRoom_KickUser_Response"ÇµKick user from groupy
+SetUserBanState".CChatRoom_SetUserBanState_Request#.CChatRoom_SetUserBanState_Response"ÇµBan/unban user from groupÇ
+RevokeInviteToGroup.CChatRoom_RevokeInvite_Request .CChatRoom_RevokeInvite_Response"(Çµ$Revoke a direct invitation of a usere
+
+CreateRole.CChatRoom_CreateRole_Request.CChatRoom_CreateRole_Response"ÇµCreate role for goupa
+GetRoles.CChatRoom_GetRoles_Request.CChatRoom_GetRoles_Response"ÇµGet all roles in groupe
+
+RenameRole.CChatRoom_RenameRole_Request.CChatRoom_RenameRole_Response"ÇµRename role for goupl
+ReorderRole.CChatRoom_ReorderRole_Request.CChatRoom_ReorderRole_Response"ÇµReorder role with a goupg
+
+DeleteRole.CChatRoom_DeleteRole_Request.CChatRoom_DeleteRole_Response"ÇµDelete role from groupá
+GetRoleActions!.CChatRoom_GetRoleActions_Request".CChatRoom_GetRoleActions_Response".Çµ*Get all defined roles and actions in groupÜ
+ReplaceRoleActions%.CChatRoom_ReplaceRoleActions_Request&.CChatRoom_ReplaceRoleActions_Response"!ÇµReplace role actions in groups
+AddRoleToUser .CChatRoom_AddRoleToUser_Request!.CChatRoom_AddRoleToUser_Response"ÇµAdd role to user in groupá
+GetRolesForUser".CChatRoom_GetRolesForUser_Request#.CChatRoom_GetRolesForUser_Response"+Çµ'Get all roles assigned to user in groupá
+DeleteRoleFromUser%.CChatRoom_DeleteRoleFromUser_Request&.CChatRoom_DeleteRoleFromUser_Response""ÇµDelete role from user in groupÅ
+JoinChatRoomGroup$.CChatRoom_JoinChatRoomGroup_Request%.CChatRoom_JoinChatRoomGroup_Response"ÇµJoin a multi-user chat room≠
+InviteFriendToChatRoomGroup..CChatRoom_InviteFriendToChatRoomGroup_Request/.CChatRoom_InviteFriendToChatRoomGroup_Response"-Çµ)Invite a friend to a multi-user chat roomó
+LeaveChatRoomGroup%.CChatRoom_LeaveChatRoomGroup_Request&.CChatRoom_LeaveChatRoomGroup_Response"2Çµ.Leaves a chat room group and all related chatsâ
+CreateChatRoom!.CChatRoom_CreateChatRoom_Request".CChatRoom_CreateChatRoom_Response"0Çµ,Creates a chat room inside a chat room groupâ
+DeleteChatRoom!.CChatRoom_DeleteChatRoom_Request".CChatRoom_DeleteChatRoom_Response"0Çµ,Deletes a chat room inside a chat room groupâ
+RenameChatRoom!.CChatRoom_RenameChatRoom_Request".CChatRoom_RenameChatRoom_Response"0Çµ,Renames a chat room inside a chat room groupç
+ReorderChatRoom".CChatRoom_ReorderChatRoom_Request#.CChatRoom_ReorderChatRoom_Response"1Çµ-Reorders a chat room inside a chat room groupç
+SendChatMessage".CChatRoom_SendChatMessage_Request#.CChatRoom_SendChatMessage_Response"1Çµ-Send a chat message to a multi-user chat roomß
+JoinVoiceChat .CChatRoom_JoinVoiceChat_Request!.CChatRoom_JoinVoiceChat_Response"QÇµMJoin the voice chat in a multi-room chat (should already be in the chat room)Ü
+LeaveVoiceChat!.CChatRoom_LeaveVoiceChat_Request".CChatRoom_LeaveVoiceChat_Response"-Çµ)Leave the voice chat in a multi-room chat√
+GetMessageHistory$.CChatRoom_GetMessageHistory_Request%.CChatRoom_GetMessageHistory_Response"aÇµ]Get the history of messages in a chat room.  You must currently be a member of the chat room.à
+GetMyChatRoomGroups&.CChatRoom_GetMyChatRoomGroups_Request'.CChatRoom_GetMyChatRoomGroups_Response" ÇµGet a list of our chat roomsö
+GetChatRoomGroupState(.CChatRoom_GetChatRoomGroupState_Request).CChatRoom_GetChatRoomGroupState_Response",Çµ(Get information about a single chat room•
+GetChatRoomGroupSummary*.CChatRoom_GetChatRoomGroupSummary_Request+.CChatRoom_GetChatRoomGroupSummary_Response"1Çµ-Get basic information about a chat room groupè
+AckChatMessage&.CChatRoom_AckChatMessage_Notification.NoResponse"HÇµDAcknowledge that we have seen the most recent chat message in a chatÅ
+CreateInviteLink#.CChatRoom_CreateInviteLink_Request$.CChatRoom_CreateInviteLink_Response""ÇµCreates a chatroom invite linkê
+GetInviteLinkInfo$.CChatRoom_GetInviteLinkInfo_Request%.CChatRoom_GetInviteLinkInfo_Response".Çµ*Returns chat room info about provided link™
+GetInviteInfo .CChatRoom_GetInviteInfo_Request!.CChatRoom_GetInviteInfo_Response"TÇµPReturns chat room info about any invite involving the sender and passed group id•
+GetInviteLinksForGroup).CChatRoom_GetInviteLinksForGroup_Request*.CChatRoom_GetInviteLinksForGroup_Response"4Çµ0Returns all invite links for the specified groupã
+
+GetBanList.CChatRoom_GetBanList_Request.CChatRoom_GetBanList_Response">Çµ:Gets a list of users who have been banned from a chat roomì
+GetInviteList .CChatRoom_GetInviteList_Request!.CChatRoom_GetInviteList_Response"=Çµ9Gets a list of users who have been invited to a chat roomÄ
+DeleteInviteLink#.CChatRoom_DeleteInviteLink_Request$.CChatRoom_DeleteInviteLink_Response"!ÇµDeletes specified invite linkƒ
+SetSessionActiveChatRoomGroups1.CChatRoom_SetSessionActiveChatRoomGroups_Request2.CChatRoom_SetSessionActiveChatRoomGroups_Response";Çµ7Set which chat rooms we are using in the active sessionπ
+SetUserChatGroupPreferences..CChatRoom_SetUserChatGroupPreferences_Request/.CChatRoom_SetUserChatGroupPreferences_Response"9Çµ5Set preferences around chat notifications for a groupà
+DeleteChatMessages%.CChatRoom_DeleteChatMessages_Request&.CChatRoom_DeleteChatMessages_Response"#ÇµDeletes specified chat messagesBÇµ>Service for joining, managing, and using multi-user chat rooms2Æ
+ClanChatRooms∏
+GetClanChatRoomInfo+.CClanChatRooms_GetClanChatRoomInfo_Request,.CClanChatRooms_GetClanChatRoomInfo_Response"FÇµBGet a list of chat rooms for a clan, optionally creating a new one≤
+SetClanChatRoomPrivate..CClanChatRooms_SetClanChatRoomPrivate_Request/.CClanChatRooms_SetClanChatRoomPrivate_Response"7Çµ3Set a clan chat room to be members only (or public)-Çµ)Methods for getting clan chat information2æ
+
+ChatRoomClient{
+NotifyIncomingChatMessage+.CChatRoom_IncomingChatMessage_Notification.NoResponse"$Çµ New chat message for a chat roomî
+NotifyChatMessageModified+.CChatRoom_ChatMessageModified_Notification.NoResponse"=Çµ9An existing chat message has been modified on the backendï
+NotifyMemberStateChange).CChatRoom_MemberStateChange_Notification.NoResponse"BÇµ>A chat room member's state has changed (join/part/permissions)à
+NotifyChatRoomHeaderStateChange+.CChatRoom_ChatRoomHeaderState_Notification.NoResponse"+Çµ'Chat Room header / metadata has changed¶
+NotifyChatRoomGroupRoomsChange0.CChatRoom_ChatRoomGroupRoomsChange_Notification.NoResponse"EÇµASomething about a chatroom group changed (created, deleted, etc.)’
+#NotifyShouldRejoinChatRoomVoiceChat;.CChatRoom_NotifyShouldRejoinChatRoomVoiceChat_Notification.NoResponse"dÇµ`Voice chat was recreated or dropped on the backend and client needs to rejoin to remain in chat.≥
+NotifyChatGroupUserStateChanged<.ChatRoomClient_NotifyChatGroupUserStateChanged_Notification.NoResponse"EÇµAUser chat group state (preferences, ack state, etc) have changed.è
+NotifyAckChatMessageEcho&.CChatRoom_AckChatMessage_Notification.NoResponse">Çµ:A session acked an unread message, echo to other sessions.,Çµ$Client notifications for chat events¿µ2¬
+ChatUsabilityÜ
+NotifyClientUsabilityMetrics3.CChatUsability_ClientUsabilityMetrics_Notification.NoResponse"$Çµ Incoming metrics from the client(Çµ$Client notifications for chat events2‚
+ChatUsabilityClientô
+#NotifyRequestClientUsabilityMetrics:.CChatUsability_RequestClientUsabilityMetrics_Notification.NoResponse")Çµ%Request client send usability metrics/Çµ'Client notifications for chat usability¿µBÄ

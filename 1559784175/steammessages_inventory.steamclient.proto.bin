@@ -1,0 +1,115 @@
+
+)steammessages_inventory.steamclient.proto,steammessages_unified_base.steamclient.proto"A
+CInventory_GetInventory_Request
+appid (
+steamid ("¿
+CInventory_Response
+etag (	
+removeditemids (
+	item_json (	
+itemdef_json (	
+ticket (I
+replayed (B7‚µ3If true, the requestid given was processed earlier."Ž
+CInventory_ExchangeItem_Request
+appid (
+steamid (
+materialsitemid (
+materialsquantity (
+outputitemdefid ("O
+-CInventory_GetEligiblePromoItemDefIDs_Request
+appid (
+steamid ("D
+.CInventory_GetEligiblePromoItemDefIDs_Response
+
+itemdefids ("Ì
+CInventory_AddItem_Request
+appid (
+	itemdefid (
+itempropsjson (	
+steamid (\
+notify (BL‚µHShould notify the user that the item was added to their Steam Inventory.
+	requestid (j
+trade_restriction (BO‚µKIf true, apply the default trade and market restriction times to this item.†
+is_purchase (:falseBj‚µfIf set, treat requestid as a txnid and create this item as a result of user microtransaction purchase."å
+CInventory_ModifyItems_Request
+appid (
+steamid (C
+updates (22.CInventory_ModifyItems_Request.ItemPropertyUpdate
+	timestamp (Ê
+ItemPropertyUpdate
+itemid (
+remove_property (
+property_name (	
+property_value_bool (
+property_value_int (
+property_value_string (	
+property_value_float ("F
+"CInventory_ConsumePlaytime_Request
+appid (
+	itemdefid ("ˆ
+CInventory_ConsumeItem_Request
+appid (
+itemid (
+quantity (
+	timestamp (	
+steamid (
+	requestid ("W
+!CInventory_DevSetNextDrop_Request
+appid (
+	itemdefid (
+droptime (	"T
+!CInventory_SplitItemStack_Request
+appid (
+itemid (
+quantity ("o
+$CInventory_CombineItemStacks_Request
+appid (
+
+fromitemid (
+
+destitemid (
+quantity ("2
+!CInventory_GetItemDefMeta_Request
+appid ("F
+"CInventory_GetItemDefMeta_Response
+modified (
+digest (	"(
+&CInventory_GetUserPurchaseInfo_Request"<
+'CInventory_GetUserPurchaseInfo_Response
+	ecurrency ("²
+CInventory_PurchaseInit_Request
+appid (
+language (=
+
+line_items (2).CInventory_PurchaseInit_Request.LineItem/
+LineItem
+	itemdefid (
+quantity ("D
+ CInventory_PurchaseInit_Response
+orderid (
+transid ("W
+#CInventory_PurchaseFinalize_Request
+appid (
+language (
+orderid ("i
+&CInventoryClient_NewItems_Notification
+appid (0
+inventory_response (2.CInventory_Response2Á
+	Inventoryz
+GetInventory .CInventory_GetInventory_Request.CInventory_Response"2‚µ.Retrieves a users inventory as a big JSON blobo
+ExchangeItem .CInventory_ExchangeItem_Request.CInventory_Response"'‚µ#Craft an item in a user's inventory½
+GetEligiblePromoItemDefIDs..CInventory_GetEligiblePromoItemDefIDs_Request/.CInventory_GetEligiblePromoItemDefIDs_Response">‚µ:Returns a list of promo item defs the user is eligible forn
+AddPromoItem.CInventory_AddItem_Request.CInventory_Response"+‚µ'Adds a promo item to a user's inventory‰
+SafeModifyItems.CInventory_ModifyItems_Request.CInventory_Response"?‚µ;Modify an item in a user's inventory (safe properties only)‡
+ConsumePlaytime#.CInventory_ConsumePlaytime_Request.CInventory_Response"9‚µ5Consumes playtime and possibly returns a granted itemY
+ConsumeItem.CInventory_ConsumeItem_Request.CInventory_Response"‚µConsume an itemn
+DevGenerateItem.CInventory_AddItem_Request.CInventory_Response"(‚µ$Grant an item when in developer mode_
+DevSetNextDrop".CInventory_DevSetNextDrop_Request.CInventory_Response"‚µConsume an items
+SplitItemStack".CInventory_SplitItemStack_Request.CInventory_Response"'‚µ#Split an item stack into two stacksq
+CombineItemStacks%.CInventory_CombineItemStacks_Request.CInventory_Response"‚µCombine two stacks of itemsœ
+GetItemDefMeta".CInventory_GetItemDefMeta_Request#.CInventory_GetItemDefMeta_Response"A‚µ=Get metadata about the current item definition for this game.§
+GetUserPurchaseInfo'.CInventory_GetUserPurchaseInfo_Request(.CInventory_GetUserPurchaseInfo_Response"=‚µ9Returns information about the user such as their currency|
+PurchaseInit .CInventory_PurchaseInit_Request!.CInventory_PurchaseInit_Response"'‚µ#Initializes a purchase for the useru
+PurchaseFinalize$.CInventory_PurchaseFinalize_Request.CInventory_Response"%‚µ!Finalizes a purchase for the user/‚µ+A service that provides access to inventory2Ä
+InventoryClientz
+NotifyNewItems'.CInventoryClient_NewItems_Notification.NoResponse"2‚µ.Notify client that the user received new items5‚µ-Client notifications inventory service eventsÀµB€

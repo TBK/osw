@@ -1,0 +1,63 @@
+
+,steammessages_depotbuilder.steamclient.proto,steammessages_unified_base.steamclient.proto"w
+&CContentBuilder_InitDepotBuild_Request
+appid (
+depotid (
+workshop_itemid (
+for_local_cs ("Ž
+'CContentBuilder_InitDepotBuild_Response
+baseline_manifestid (
+
+chunk_size (
+aes_key (
+rsa_key (
+url_host (	"­
+(CContentBuilder_StartDepotUpload_Request
+appid (
+depotid (
+workshop_itemid (
+for_local_cs (
+baseline_manifestid (
+manifest_size ("G
+)CContentBuilder_StartDepotUpload_Response
+depot_build_handle ("Z
+-CContentBuilder_GetMissingDepotChunks_Request
+appid (
+depot_build_handle ("Ò
+.CContentBuilder_GetMissingDepotChunks_ResponseN
+missing_chunks (26.CContentBuilder_GetMissingDepotChunks_Response.Chunks
+total_missing_chunks (
+total_missing_bytes (
+Chunks
+sha ("V
+)CContentBuilder_FinishDepotUpload_Request
+appid (
+depot_build_handle ("U
+*CContentBuilder_FinishDepotUpload_Response
+
+manifestid (
+prev_reused ("Ù
+&CContentBuilder_CommitAppBuild_Request
+appid (G
+depot_manifests (2..CContentBuilder_CommitAppBuild_Request.Depots
+build_notes (	
+live_branch (	-
+Depots
+depotid (
+
+manifestid (":
+'CContentBuilder_CommitAppBuild_Response
+buildid ("c
+)CContentBuilder_SignInstallScript_Request
+appid (
+depotid (
+install_script (	"K
+*CContentBuilder_SignInstallScript_Response
+signed_install_script (	2’
+ContentBuilder˜
+InitDepotBuild'.CContentBuilder_InitDepotBuild_Request(.CContentBuilder_InitDepotBuild_Response"3‚µ/Get inital parameters to start building a depotž
+StartDepotUpload).CContentBuilder_StartDepotUpload_Request*.CContentBuilder_StartDepotUpload_Response"3‚µ/Start uploading manifest and chunks for a depot©
+GetMissingDepotChunks..CContentBuilder_GetMissingDepotChunks_Request/.CContentBuilder_GetMissingDepotChunks_Response"/‚µ+Get list of missing chunks for depot upload±
+FinishDepotUpload*.CContentBuilder_FinishDepotUpload_Request+.CContentBuilder_FinishDepotUpload_Response"C‚µ?Commit a depot build after manifest and all chunks are uploaded§
+CommitAppBuild'.CContentBuilder_CommitAppBuild_Request(.CContentBuilder_CommitAppBuild_Response"B‚µ>Combine previous depot uploads into an app build and commit itˆ
+SignInstallScript*.CContentBuilder_SignInstallScript_Request+.CContentBuilder_SignInstallScript_Response"‚µSign an install script/‚µ+Interface to build and upload depot contentB€

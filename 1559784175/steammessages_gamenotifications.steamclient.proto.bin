@@ -1,0 +1,83 @@
+
+1steammessages_gamenotifications.steamclient.proto,steammessages_unified_base.steamclient.proto"‡
+CGameNotifications_Variable¶
+key (	BòÇµìThe name of the variable in the localized text -- anywhere that %variablename% is found within the text it will be substituded with the given valueó
+value (	BáÇµÇThe value of the variable to substitute in the localized text in place of the given variable.  Can itself be a localization token."Ö
+ CGameNotifications_LocalizedTextH
+token (	B9Çµ5A localization token that maps to the desired string.ç
+	variables (2.CGameNotifications_VariableB\ÇµXA list of variables values to substitute in any variables found in the localized string.Ü
+rendered_text (	BoÇµkText rendered in the requested language, complete with variable substitutions, if a language was specified."ï
+CGameNotifications_UserStatus1
+steamid (B ÇµThe specific user's steamid.§
+state (	BîÇµèThe user's state.  ready -- the user is ready to play.  waiting -- The game is waiting on an action from the user. completed, the game is over.Ñ
+title (2!.CGameNotifications_LocalizedTextBRÇµNTitle of the session to display to this user in their list of active sessions.í
+message (2!.CGameNotifications_LocalizedTextB^ÇµZSubtitle of the session to display to this user user within their list of active sessions."ì
+(CGameNotifications_CreateSession_Request7
+appid (B(Çµ$The appid to create the session for.
+context (BnÇµjGame-specified context value the game can used to associate the session with some object on their backend.É
+title (2!.CGameNotifications_LocalizedTextBQÇµMThe title of the session to be displayed within each user's list of sessions.a
+users (2.CGameNotifications_UserStatusB2Çµ.The initial state of all users in the session.√
+steamid (B±Çµ¨(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user."i
+)CGameNotifications_CreateSession_Response<
+	sessionid (B)Çµ%The sessionid of the created session."è
+(CGameNotifications_DeleteSession_Request/
+	sessionid (BÇµThe sessionid to delete.6
+appid (B'Çµ#The appid of the session to delete.z
+steamid (BiÇµe(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session."+
+)CGameNotifications_DeleteSession_Response"Ω
+(CGameNotifications_UpdateSession_Request/
+	sessionid (BÇµThe sessionid to update.6
+appid (B'Çµ#The appid of the session to update.ê
+title (2!.CGameNotifications_LocalizedTextB^ÇµZ(Optional) The new title of the session.  If not specified, the title will not be changed.Œ
+users (2.CGameNotifications_UserStatusBûÇµô(Optional) A list of users whose state will be updated to reflect the given state. If the users are not already in the session, they will be added to it.√
+steamid (B±Çµ¨(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user."+
+)CGameNotifications_UpdateSession_Response"°
+,CGameNotifications_EnumerateSessions_Request~
+appid (BoÇµkThe sessionid to request details for. Optional. If not specified, all the user's sessions will be returned.é
+include_all_user_messages (BkÇµg(Optional) Boolean determining whether the message for all users should be included. Defaults to false.õ
+include_auth_user_message (BxÇµt(Optional) Boolean determining whether the message for the authenticated user should be included. Defaults to false.B
+language (	B0Çµ,(Optional) Language to localize the text in."√
+CGameNotifications_Session6
+	sessionid (B#ÇµThe sessionid for this session.-
+appid (BÇµThe appid for the session.
+context (BnÇµjGame-specified context value the game can used to associate the session with some object on their backend.X
+title (2!.CGameNotifications_LocalizedTextB&Çµ"The current title for the session.;
+time_created (B%Çµ!The time the session was created.@
+time_updated (B*Çµ&The last time the session was updated.d
+user_status (2.CGameNotifications_UserStatusB/Çµ+The status of all the users in the session."Ç
+-CGameNotifications_EnumerateSessions_ResponseQ
+sessions (2.CGameNotifications_SessionB"ÇµA list of the user's sessions."÷
+,CGameNotifications_GetSessionDetails_RequestP
+sessions (2>.CGameNotifications_GetSessionDetails_Request.RequestedSession.
+appid (BÇµThe appid for the sessions.7
+language (	B%Çµ!Language to localize the text in.Í
+RequestedSession8
+	sessionid (B%Çµ!The sessionid to get details for.õ
+include_auth_user_message (BxÇµt(Optional) Boolean determining whether the message for the authenticated user should be included. Defaults to false."
+-CGameNotifications_GetSessionDetails_ResponseN
+sessions (2.CGameNotifications_SessionBÇµThe details of the session."®
+GameNotificationSettings7
+appid (B(Çµ$The appid to create the session for.S
+allow_notifications (B6Çµ2Whether the user allows notification for this app."v
+5CGameNotifications_UpdateNotificationSettings_Request=
+game_notification_settings (2.GameNotificationSettings"8
+6CGameNotifications_UpdateNotificationSettings_Response"∆
+8CGameNotifications_OnNotificationsRequested_NotificationN
+steamid (B=Çµ9steamid of the user who notifications were requested for.:
+appid (B+Çµ'The appid that requested notifications."æ
+3CGameNotifications_OnUserStatusChanged_Notification>
+steamid (B-Çµ)steamid of the user whose status changed.X
+	sessionid (BEÇµAThe sessionid of the session where the user's status was changed.L
+appid (B=Çµ9The appid of the session where the user's status changed.V
+status (2.CGameNotifications_UserStatusB&Çµ"(Optional) New status of the user.G
+removed (B6Çµ2(Optional) User has been removed from the session.2¶
+GameNotificationsç
+UserCreateSession).CGameNotifications_CreateSession_Request*.CGameNotifications_CreateSession_Response"!ÇµCreates an async game sessionç
+UserDeleteSession).CGameNotifications_DeleteSession_Request*.CGameNotifications_DeleteSession_Response"!ÇµDeletes an async game sessionç
+UserUpdateSession).CGameNotifications_UpdateSession_Request*.CGameNotifications_UpdateSession_Response"!ÇµUpdates an async game sessionî
+EnumerateSessions-.CGameNotifications_EnumerateSessions_Request..CGameNotifications_EnumerateSessions_Response" ÇµEnumerates a user's sessionsû
+GetSessionDetails-.CGameNotifications_GetSessionDetails_Request..CGameNotifications_GetSessionDetails_Response"*Çµ&Get the details for a specific session÷
+UpdateNotificationSettings6.CGameNotifications_UpdateNotificationSettings_Request7.CGameNotifications_UpdateNotificationSettings_Response"GÇµCUpdates whether a user allows game notifications for a specific appPÇµLA service for functions related to the asyncronous game notification server.2ﬂ
+GameNotificationsClientï
+OnNotificationsRequested9.CGameNotifications_OnNotificationsRequested_Notification.NoResponse"1Çµ-Requests that the user opt into notificationsç
+OnUserStatusChanged4.CGameNotifications_OnUserStatusChanged_Notification.NoResponse"3Çµ/Notification that the user's status has changedÇµClient notifications¿µBÄ

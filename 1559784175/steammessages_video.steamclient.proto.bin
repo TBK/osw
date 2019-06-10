@@ -1,0 +1,44 @@
+
+%steammessages_video.steamclient.proto,steammessages_unified_base.steamclient.proto"
+ CVideo_ClientGetVideoURL_Request
+video_id (B‚µVideo ID=
+client_cellid (B&‚µ"Cell ID of client, zero if unknown"r
+!CVideo_ClientGetVideoURL_Response
+video_id (B‚µVideo ID-
+	video_url (	B‚µURL for video manifest"ª
+VideoBookmark
+app_id (B
+‚µApp ID]
+playback_position_in_seconds (B7‚µ3How many seconds into the video the bookmark is for/
+video_track_id (B‚µvideo track choice./
+audio_track_id (B‚µaudio track choice.C
+timedtext_track_id (B'‚µ#timedtimed or subtitle track choiceO
+last_modified (B8‚µ4when we recorded it was last modified. Not settable.U
+hide_from_watch_history (:falseB-‚µ)Whether I want to show this in my historyO
+hide_from_library (:falseB-‚µ)Whether I want to show this in my library"r
+$CVideo_SetVideoBookmark_NotificationJ
+	bookmarks (2.VideoBookmarkB'‚µ#list of bookmarks we want to store."
+ CVideo_GetVideoBookmarks_Request_
+appids (BO‚µKList of App IDs to grab bookmarks for. Can be empty if using updated_since.|
+updated_since (Be‚µaOnly return results after time. Min value is 1. (seconds since epoch January 1st, 1970 Unix Time)"u
+!CVideo_GetVideoBookmarks_ResponseP
+	bookmarks (2.VideoBookmarkB-‚µ)List of bookmarks we found. Can be empty.":
+ CVideo_UnlockedH264_Notification
+encryption_key ("…
+(CFovasVideo_ClientGetOPFSettings_Request
+app_id (B
+‚µApp ID=
+client_cellid (B&‚µ"Cell ID of client, zero if unknown"|
+)CFovasVideo_ClientGetOPFSettings_Response
+app_id (B
+‚µApp ID3
+opf_settings (	B‚µJSON blob of OPF Settings2µ
+VideoŽ
+ClientGetVideoURL!.CVideo_ClientGetVideoURL_Request".CVideo_ClientGetVideoURL_Response"2‚µ.Get the initial URL to begin streaming a videoÁ
+SetVideoBookmark%.CVideo_SetVideoBookmark_Notification.NoResponse"y‚µuBookmarks the locations in the video the user has reached. As as record playback settings per video. Fire and forget.Ã
+GetVideoBookmarks!.CVideo_GetVideoBookmarks_Request".CVideo_GetVideoBookmarks_Response"g‚µcReturns the video bookmarks locations for the specific videos. Includes playback settings per video‚µVideo methods2ž
+VideoClientˆ
+NotifyUnlockedH264!.CVideo_UnlockedH264_Notification.NoResponse"B‚µ>Notification from server to client that h264 has been unlockedÀµ2ó
+
+FovasVideoÃ
+ClientGetOPFSettings).CFovasVideo_ClientGetOPFSettings_Request*.CFovasVideo_ClientGetOPFSettings_Response"T‚µPRetrieve the OPF settings JSON blob. Available via the Client for 360 Player App‚µFovas Video Service MethodsB€

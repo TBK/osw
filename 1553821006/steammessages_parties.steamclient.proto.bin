@@ -1,45 +1,0 @@
-
-'steammessages_parties.steamclient.proto,steammessages_unified_base.steamclient.proto"@
-CParties_JoinParty_Request
-steamid (
-	beacon_id ("H
-CParties_JoinParty_Response
-	beacon_id (
-connect_string (	"E
-CParties_BeaconLocation
-location_type (
-location_id ("ù
-CParties_CreateBeacon_Request
-appid (
-num_open_slots (+
-	locations (2.CParties_BeaconLocation
-connect_string (	
-metadata (	"3
-CParties_CreateBeacon_Response
-	beacon_id ("R
-'CParties_OnReservationCompleted_Request
-	beacon_id (
-user_steamid ("=
-(CParties_OnReservationCompleted_Response
-	beacon_id ("M
-"CParties_CancelReservation_Request
-	beacon_id (
-user_steamid ("8
-#CParties_CancelReservation_Response
-	beacon_id ("P
-#CParties_ChangeNumOpenSlots_Request
-	beacon_id (
-num_open_slots ("9
-$CParties_ChangeNumOpenSlots_Response
-	beacon_id ("3
-CParties_DestroyBeacon_Request
-	beacon_id ("4
-CParties_DestroyBeacon_Response
-	beacon_id (2Ÿ
-Partiesπ
-	JoinParty.CParties_JoinParty_Request.CParties_JoinParty_Response"qÇµmRequest to join a Party via the given Beacon ID. If successful, will be given the necessary 'connect' string.Ö
-CreateBeacon.CParties_CreateBeacon_Request.CParties_CreateBeacon_Response"4Çµ0Create a Beacon to attract people to your Party.∑
-OnReservationCompleted(.CParties_OnReservationCompleted_Request).CParties_OnReservationCompleted_Response"HÇµDNotify Steam that a user with a reservation has successfully joined.æ
-CancelReservation#.CParties_CancelReservation_Request$.CParties_CancelReservation_Response"^ÇµZNotify Steam that a user with a reservation either never showed up, or has left the party.Ü
-ChangeNumOpenSlots$.CParties_ChangeNumOpenSlots_Request%.CParties_ChangeNumOpenSlots_Response"#ÇµChange the number of open slotsj
-DestroyBeacon.CParties_DestroyBeacon_Request .CParties_DestroyBeacon_Response"ÇµDelete the Beacon.ÇµParty-related servicesBÄ
